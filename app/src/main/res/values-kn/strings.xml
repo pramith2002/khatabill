@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಖಾತಾಬಿಲ್</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">ಮುಖಪುಟ</string>
+    <string name="nav_parties">ಗ್ರಾಹಕರು</string>
+    <string name="nav_billing">ಬಿಲ್</string>
+    <string name="nav_items">ಸರಕುಗಳು</string>
+    <string name="nav_more">ಇನ್ನಷ್ಟು</string>
+
+    <!-- Language -->
+    <string name="language_title">ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="language_hint">ಇದನ್ನು ನಂತರ \"ಇನ್ನಷ್ಟು\" ನಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು</string>
+    <string name="language_section">ಭಾಷೆ</string>
+    <string name="language_selected">ಆಯ್ಕೆಯಾಗಿದೆ</string>
+    <string name="lang_en">English</string>
+    <string name="lang_kn">ಕನ್ನಡ</string>
+    <string name="lang_hi">हिन्दी</string>
+
+    <!-- Placeholder tabs -->
+    <string name="coming_soon">ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ</string>
+    <string name="coming_soon_hint">ಈ ಪರದೆಯನ್ನು ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನಿರ್ಮಿಸಲಾಗುವುದು</string>
+
+</resources>

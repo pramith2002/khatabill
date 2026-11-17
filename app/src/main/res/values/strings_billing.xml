@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Document types -->
+    <string name="doc_sale">Sale</string>
+    <string name="doc_purchase">Purchase</string>
+    <string name="doc_quotation">Quotation</string>
+    <string name="doc_title_tax_invoice">TAX INVOICE</string>
+    <string name="doc_title_bill_of_supply">BILL OF SUPPLY</string>
+    <string name="doc_title_quotation">QUOTATION</string>
+    <string name="doc_title_purchase">PURCHASE BILL</string>
+
+    <!-- Bill list -->
+    <string name="invoices_empty">No bills yet</string>
+    <string name="invoices_empty_hint">Tap New bill to create your first one</string>
+    <string name="invoice_new">New bill</string>
+    <string name="walk_in_customer">Walk-in customer</string>
+    <string name="status_unpaid">Unpaid</string>
+    <string name="status_partial">Part paid</string>
+    <string name="status_paid">Paid</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_draft">Draft</string>
+
+    <!-- New bill -->
+    <string name="field_party">Customer or party</string>
+    <string name="party_choose">Choose party</string>
+    <string name="party_walk_in_option">Walk-in customer (no name)</string>
+    <string name="field_date">Date</string>
+    <string name="field_place_of_supply">Place of supply</string>
+    <string name="field_supplier_state">Supplier state</string>
+    <string name="add_item">Add item</string>
+    <string name="picker_choose_item">Choose item</string>
+    <string name="line_qty">Quantity</string>
+    <string name="line_rate">Rate (₹)</string>
+    <string name="line_discount">Discount</string>
+    <string name="discount_percent_short">%</string>
+    <string name="discount_amount_short">₹</string>
+    <string name="line_remove">Remove item</string>
+    <string name="field_overall_discount">Overall discount</string>
+    <string name="field_other_charges">Extra charges (₹)</string>
+    <string name="field_paid_now">Received now (₹)</string>
+    <string name="field_invoice_notes">Notes (optional)</string>
+    <string name="btn_save_bill">Save bill</string>
+    <string name="err_no_items">Add at least one item</string>
+    <string name="err_check_numbers">Please check the numbers above</string>
+    <string name="err_paid_more">Received amount is more than the total</string>
+
+    <!-- Totals -->
+    <string name="total_subtotal">Subtotal</string>
+    <string name="total_discount">Discount</string>
+    <string name="total_taxable">Taxable amount</string>
+    <string name="total_cgst">CGST</string>
+    <string name="total_sgst">SGST</string>
+    <string name="total_igst">IGST</string>
+    <string name="total_other">Extra charges</string>
+    <string name="total_roundoff">Round off</string>
+    <string name="total_grand">Total</string>
+    <string name="total_paid">Received</string>
+    <string name="total_due">Balance due</string>
+
+    <!-- Bill detail -->
+    <string name="invoice_number">Bill no.</string>
+    <string name="invoice_bill_to">Bill to</string>
+    <string name="invoice_share">Share PDF</string>
+    <string name="invoice_pdf_failed">Could not create the PDF</string>
+    <string name="invoice_cancel">Cancel bill</string>
+    <string name="invoice_cancel_title">Cancel this bill?</string>
+    <string name="invoice_cancel_hint">The bill number stays used and stock is put back.</string>
+    <string name="field_cancel_reason">Reason</string>
+    <string name="invoice_cancelled_reason">Cancelled: %1$s</string>
+
+    <!-- PDF -->
+    <string name="pdf_gstin">GSTIN: %1$s</string>
+    <string name="pdf_phone">Phone: %1$s</string>
+    <string name="pdf_date">Date: %1$s</string>
+    <string name="pdf_place_of_supply">Place of supply: %1$s</string>
+    <string name="pdf_col_item">Item</string>
+    <string name="pdf_col_hsn">HSN</string>
+    <string name="pdf_col_qty">Qty</string>
+    <string name="pdf_col_rate">Rate</string>
+    <string name="pdf_col_discount">Disc.</string>
+    <string name="pdf_col_taxable">Taxable</string>
+    <string name="pdf_col_gst">GST</string>
+    <string name="pdf_col_amount">Amount</string>
+    <string name="pdf_amount_in_words">Amount in words</string>
+    <string name="pdf_bank_details">Bank details</string>
+    <string name="pdf_bank_name">Bank: %1$s</string>
+    <string name="pdf_account_no">A/c no.: %1$s</string>
+    <string name="pdf_ifsc">IFSC: %1$s</string>
+    <string name="pdf_upi">UPI: %1$s</string>
+    <string name="pdf_signatory">Authorised signatory</string>
+    <string name="pdf_thanks">Thank you for your business</string>
+    <string name="pdf_page">Page %1$d</string>
+    <string name="pdf_notes">Notes: %1$s</string>
+</resources>

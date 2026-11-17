@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_step_of">ಹಂತ %1$d / %2$d</string>
+    <string name="setup_title_shop">ನಿಮ್ಮ ಅಂಗಡಿ</string>
+    <string name="setup_hint_shop">ಇದು ನಿಮ್ಮ ಬಿಲ್‌ಗಳಲ್ಲಿ ಮುದ್ರಣವಾಗುತ್ತದೆ</string>
+    <string name="setup_title_gst">GST ಮತ್ತು ವ್ಯಾಪಾರದ ವಿಧ</string>
+    <string name="setup_hint_gst">GST ಇಲ್ಲವೇ? ಕೊನೆಯ ಆಯ್ಕೆ ಆರಿಸಿ. ಸರಳ ಬಿಲ್ ಮಾಡಬಹುದು.</string>
+    <string name="setup_title_pay">ಪಾವತಿ ಮತ್ತು ಬಿಲ್ ಸಂಖ್ಯೆ</string>
+    <string name="setup_hint_pay">ಎಲ್ಲವೂ ಐಚ್ಛಿಕ. UPI ಐಡಿ ಬಿಲ್‌ನ ಪಾವತಿ QR ಗೆ ಬಳಕೆಯಾಗುತ್ತದೆ.</string>
+
+    <string name="field_shop_name">ಅಂಗಡಿಯ ಹೆಸರು</string>
+    <string name="field_owner_name">ಮಾಲೀಕರ ಹೆಸರು</string>
+    <string name="field_mobile">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ</string>
+    <string name="field_address">ವಿಳಾಸ</string>
+    <string name="field_city">ಊರು</string>
+    <string name="field_pincode">ಪಿನ್‌ಕೋಡ್</string>
+
+    <string name="gst_choice_title">ನಿಮಗೆ GST ಇದೆಯೇ?</string>
+    <string name="gst_regular">ಹೌದು, GST ಇದೆ</string>
+    <string name="gst_composition">ಕಾಂಪೊಸಿಷನ್ ಯೋಜನೆ</string>
+    <string name="gst_none">GST ಇಲ್ಲ (ಬಿಲ್ ಆಫ್ ಸಪ್ಲೈ)</string>
+    <string name="field_gstin">GSTIN</string>
+    <string name="field_pan">PAN (ಐಚ್ಛಿಕ)</string>
+    <string name="field_state">ರಾಜ್ಯ</string>
+    <string name="state_from_gstin">ರಾಜ್ಯವನ್ನು ನಿಮ್ಮ GSTIN ನಿಂದ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ</string>
+    <string name="field_business_type">ವ್ಯಾಪಾರದ ವಿಧ</string>
+    <string name="btype_agarbatti">ಅಗರಬತ್ತಿ</string>
+    <string name="btype_silk">ರೇಷ್ಮೆ ಮತ್ತು ಕರಕುಶಲ</string>
+    <string name="btype_food">ಆಹಾರ ಮತ್ತು ಸಿಹಿತಿಂಡಿ</string>
+    <string name="btype_garments">ಬಟ್ಟೆ</string>
+    <string name="btype_general">ಸಾಮಾನ್ಯ ವ್ಯಾಪಾರಿ</string>
+    <string name="btype_manufacturer">ತಯಾರಕರು</string>
+
+    <string name="field_upi">UPI ಐಡಿ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_bank_name">ಬ್ಯಾಂಕ್ ಹೆಸರು (ಐಚ್ಛಿಕ)</string>
+    <string name="field_account_no">ಖಾತೆ ಸಂಖ್ಯೆ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_ifsc">IFSC (ಐಚ್ಛಿಕ)</string>
+    <string name="field_prefix">ಬಿಲ್ ಸಂಖ್ಯೆಯ ಮುಂಬರಹ, ಗರಿಷ್ಠ 2 ಅಕ್ಷರ (ಐಚ್ಛಿಕ)</string>
+</resources>

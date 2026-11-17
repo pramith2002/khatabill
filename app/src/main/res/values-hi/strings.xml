@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">खाताबिल</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_parties">ग्राहक</string>
+    <string name="nav_billing">बिल</string>
+    <string name="nav_items">सामान</string>
+    <string name="nav_more">और</string>
+
+    <!-- Language -->
+    <string name="language_title">अपनी भाषा चुनें</string>
+    <string name="language_hint">इसे बाद में \"और\" में बदल सकते हैं</string>
+    <string name="language_section">भाषा</string>
+    <string name="language_selected">चुनी गई</string>
+    <string name="lang_en">English</string>
+    <string name="lang_kn">ಕನ್ನಡ</string>
+    <string name="lang_hi">हिन्दी</string>
+
+    <!-- Placeholder tabs -->
+    <string name="coming_soon">जल्द आ रहा है</string>
+    <string name="coming_soon_hint">यह स्क्रीन अगले चरण में बनाई जाएगी</string>
+
+</resources>

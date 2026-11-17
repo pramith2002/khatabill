@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_step_of">Step %1$d of %2$d</string>
+    <string name="setup_title_shop">Your shop</string>
+    <string name="setup_hint_shop">This is printed on your bills</string>
+    <string name="setup_title_gst">GST and business type</string>
+    <string name="setup_hint_gst">No GST? Choose the last option. You can still make simple bills.</string>
+    <string name="setup_title_pay">Payments and bill numbers</string>
+    <string name="setup_hint_pay">All optional. The UPI ID is used for the payment QR on your bills.</string>
+
+    <string name="field_shop_name">Shop name</string>
+    <string name="field_owner_name">Owner name</string>
+    <string name="field_mobile">Mobile number</string>
+    <string name="field_address">Address</string>
+    <string name="field_city">City</string>
+    <string name="field_pincode">Pincode</string>
+
+    <string name="gst_choice_title">Do you have GST?</string>
+    <string name="gst_regular">Yes, I have GST</string>
+    <string name="gst_composition">Composition scheme</string>
+    <string name="gst_none">No GST (bill of supply)</string>
+    <string name="field_gstin">GSTIN</string>
+    <string name="field_pan">PAN (optional)</string>
+    <string name="field_state">State</string>
+    <string name="state_from_gstin">State is taken from your GSTIN</string>
+    <string name="field_business_type">Business type</string>
+    <string name="btype_agarbatti">Agarbatti (incense)</string>
+    <string name="btype_silk">Silk and handicrafts</string>
+    <string name="btype_food">Food and sweets</string>
+    <string name="btype_garments">Garments</string>
+    <string name="btype_general">General trader</string>
+    <string name="btype_manufacturer">Manufacturer</string>
+
+    <string name="field_upi">UPI ID (optional)</string>
+    <string name="field_bank_name">Bank name (optional)</string>
+    <string name="field_account_no">Account number (optional)</string>
+    <string name="field_ifsc">IFSC (optional)</string>
+    <string name="field_prefix">Bill number prefix, up to 2 letters (optional)</string>
+</resources>

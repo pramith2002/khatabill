@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="items_hint">Search by name, code or barcode</string>
+    <string name="items_empty">No items yet</string>
+    <string name="items_empty_hint">Tap Add item to save your first product</string>
+    <string name="item_add">Add item</string>
+    <string name="item_title_new">New item</string>
+    <string name="item_title_edit">Edit item</string>
+
+    <string name="field_item_name">Item name</string>
+    <string name="field_item_type">Type</string>
+    <string name="itype_product">Product</string>
+    <string name="itype_service">Service</string>
+    <string name="field_unit">Unit</string>
+    <string name="field_barcode">Barcode (optional)</string>
+    <string name="field_sku">Item code (optional)</string>
+    <string name="field_hsn">HSN or SAC code (optional)</string>
+    <string name="field_gst_rate">GST rate</string>
+    <string name="field_tax_inclusive">Price includes GST</string>
+    <string name="field_sale_price">Selling price (₹)</string>
+    <string name="field_purchase_price">Buying price (₹)</string>
+    <string name="field_mrp">MRP (₹, optional)</string>
+    <string name="field_min_stock">Low stock alert below (optional)</string>
+    <string name="field_opening_stock">Stock you have now (optional)</string>
+    <string name="field_category">Category</string>
+    <string name="category_none">No category</string>
+    <string name="category_new_hint">New category name</string>
+
+    <string name="err_barcode_exists">Another item already has this barcode</string>
+
+    <string name="item_stock">Stock</string>
+    <string name="item_low_stock">Low stock</string>
+    <string name="stock_history">Stock history</string>
+    <string name="stock_adjust">Adjust stock</string>
+    <string name="stock_in">Add stock</string>
+    <string name="stock_out">Remove stock</string>
+    <string name="field_quantity">Quantity</string>
+    <string name="field_note">Note (optional)</string>
+    <string name="reason_sale">Sale</string>
+    <string name="reason_purchase">Purchase</string>
+    <string name="reason_return">Return</string>
+    <string name="reason_adjustment">Adjustment</string>
+    <string name="reason_opening">Opening stock</string>
+
+    <string name="amount_rupees">₹%1$s</string>
+    <string name="qty_unit">%1$s %2$s</string>
+    <string name="percent_value">%1$s%%</string>
+</resources>

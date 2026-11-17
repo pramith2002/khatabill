@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="items_hint">नाम, कोड या बारकोड से खोजें</string>
+    <string name="items_empty">अभी कोई सामान नहीं है</string>
+    <string name="items_empty_hint">पहला सामान जोड़ने के लिए “सामान जोड़ें” दबाएँ</string>
+    <string name="item_add">सामान जोड़ें</string>
+    <string name="item_title_new">नया सामान</string>
+    <string name="item_title_edit">सामान बदलें</string>
+
+    <string name="field_item_name">सामान का नाम</string>
+    <string name="field_item_type">प्रकार</string>
+    <string name="itype_product">वस्तु</string>
+    <string name="itype_service">सेवा</string>
+    <string name="field_unit">इकाई</string>
+    <string name="field_barcode">बारकोड (वैकल्पिक)</string>
+    <string name="field_sku">सामान कोड (वैकल्पिक)</string>
+    <string name="field_hsn">HSN या SAC कोड (वैकल्पिक)</string>
+    <string name="field_gst_rate">GST दर</string>
+    <string name="field_tax_inclusive">कीमत में GST शामिल है</string>
+    <string name="field_sale_price">बिक्री मूल्य (₹)</string>
+    <string name="field_purchase_price">खरीद मूल्य (₹)</string>
+    <string name="field_mrp">MRP (₹, वैकल्पिक)</string>
+    <string name="field_min_stock">इससे कम होने पर चेतावनी (वैकल्पिक)</string>
+    <string name="field_opening_stock">अभी मौजूद स्टॉक (वैकल्पिक)</string>
+    <string name="field_category">श्रेणी</string>
+    <string name="category_none">कोई श्रेणी नहीं</string>
+    <string name="category_new_hint">नई श्रेणी का नाम</string>
+
+    <string name="err_barcode_exists">यह बारकोड किसी दूसरे सामान में पहले से है</string>
+
+    <string name="item_stock">स्टॉक</string>
+    <string name="item_low_stock">कम स्टॉक</string>
+    <string name="stock_history">स्टॉक का इतिहास</string>
+    <string name="stock_adjust">स्टॉक ठीक करें</string>
+    <string name="stock_in">स्टॉक जोड़ें</string>
+    <string name="stock_out">स्टॉक घटाएँ</string>
+    <string name="field_quantity">मात्रा</string>
+    <string name="field_note">टिप्पणी (वैकल्पिक)</string>
+    <string name="reason_sale">बिक्री</string>
+    <string name="reason_purchase">खरीद</string>
+    <string name="reason_return">वापसी</string>
+    <string name="reason_adjustment">सुधार</string>
+    <string name="reason_opening">शुरुआती स्टॉक</string>
+
+    <string name="amount_rupees">₹%1$s</string>
+    <string name="qty_unit">%1$s %2$s</string>
+    <string name="percent_value">%1$s%%</string>
+</resources>

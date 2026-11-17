@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Document types -->
+    <string name="doc_sale">बिक्री</string>
+    <string name="doc_purchase">खरीद</string>
+    <string name="doc_quotation">कोटेशन</string>
+    <string name="doc_title_tax_invoice">कर चालान</string>
+    <string name="doc_title_bill_of_supply">आपूर्ति बिल</string>
+    <string name="doc_title_quotation">कोटेशन</string>
+    <string name="doc_title_purchase">खरीद बिल</string>
+
+    <!-- Bill list -->
+    <string name="invoices_empty">अभी कोई बिल नहीं है</string>
+    <string name="invoices_empty_hint">पहला बिल बनाने के लिए “नया बिल” दबाएँ</string>
+    <string name="invoice_new">नया बिल</string>
+    <string name="walk_in_customer">आम ग्राहक</string>
+    <string name="status_unpaid">बाकी है</string>
+    <string name="status_partial">आंशिक भुगतान</string>
+    <string name="status_paid">चुकाया गया</string>
+    <string name="status_cancelled">रद्द</string>
+    <string name="status_draft">ड्राफ़्ट</string>
+
+    <!-- New bill -->
+    <string name="field_party">ग्राहक या पार्टी</string>
+    <string name="party_choose">पार्टी चुनें</string>
+    <string name="party_walk_in_option">आम ग्राहक (नाम नहीं)</string>
+    <string name="field_date">तारीख़</string>
+    <string name="field_place_of_supply">आपूर्ति का स्थान</string>
+    <string name="field_supplier_state">सप्लायर का राज्य</string>
+    <string name="add_item">सामान जोड़ें</string>
+    <string name="picker_choose_item">सामान चुनें</string>
+    <string name="line_qty">मात्रा</string>
+    <string name="line_rate">दर (₹)</string>
+    <string name="line_discount">छूट</string>
+    <string name="discount_percent_short">%</string>
+    <string name="discount_amount_short">₹</string>
+    <string name="line_remove">सामान हटाएँ</string>
+    <string name="field_overall_discount">कुल छूट</string>
+    <string name="field_other_charges">अतिरिक्त शुल्क (₹)</string>
+    <string name="field_paid_now">अभी मिली रकम (₹)</string>
+    <string name="field_invoice_notes">टिप्पणी (वैकल्पिक)</string>
+    <string name="btn_save_bill">बिल सहेजें</string>
+    <string name="err_no_items">कम से कम एक सामान जोड़ें</string>
+    <string name="err_check_numbers">ऊपर की संख्याएँ जाँचें</string>
+    <string name="err_paid_more">मिली रकम कुल से ज़्यादा है</string>
+
+    <!-- Totals -->
+    <string name="total_subtotal">उप-कुल</string>
+    <string name="total_discount">छूट</string>
+    <string name="total_taxable">कर योग्य राशि</string>
+    <string name="total_cgst">CGST</string>
+    <string name="total_sgst">SGST</string>
+    <string name="total_igst">IGST</string>
+    <string name="total_other">अतिरिक्त शुल्क</string>
+    <string name="total_roundoff">पूर्णांक</string>
+    <string name="total_grand">कुल</string>
+    <string name="total_paid">मिला</string>
+    <string name="total_due">बकाया राशि</string>
+
+    <!-- Bill detail -->
+    <string name="invoice_number">बिल नं.</string>
+    <string name="invoice_bill_to">बिल किसके नाम</string>
+    <string name="invoice_share">PDF भेजें</string>
+    <string name="invoice_pdf_failed">PDF नहीं बन सका</string>
+    <string name="invoice_cancel">बिल रद्द करें</string>
+    <string name="invoice_cancel_title">क्या यह बिल रद्द करें?</string>
+    <string name="invoice_cancel_hint">बिल नंबर इस्तेमाल में ही रहेगा और स्टॉक वापस जुड़ जाएगा।</string>
+    <string name="field_cancel_reason">कारण</string>
+    <string name="invoice_cancelled_reason">रद्द: %1$s</string>
+
+    <!-- PDF -->
+    <string name="pdf_gstin">GSTIN: %1$s</string>
+    <string name="pdf_phone">फ़ोन: %1$s</string>
+    <string name="pdf_date">तारीख़: %1$s</string>
+    <string name="pdf_place_of_supply">आपूर्ति का स्थान: %1$s</string>
+    <string name="pdf_col_item">सामान</string>
+    <string name="pdf_col_hsn">HSN</string>
+    <string name="pdf_col_qty">मात्रा</string>
+    <string name="pdf_col_rate">दर</string>
+    <string name="pdf_col_discount">छूट</string>
+    <string name="pdf_col_taxable">कर योग्य</string>
+    <string name="pdf_col_gst">GST</string>
+    <string name="pdf_col_amount">राशि</string>
+    <string name="pdf_amount_in_words">राशि शब्दों में (अंग्रेज़ी)</string>
+    <string name="pdf_bank_details">बैंक विवरण</string>
+    <string name="pdf_bank_name">बैंक: %1$s</string>
+    <string name="pdf_account_no">खाता सं.: %1$s</string>
+    <string name="pdf_ifsc">IFSC: %1$s</string>
+    <string name="pdf_upi">UPI: %1$s</string>
+    <string name="pdf_signatory">अधिकृत हस्ताक्षर</string>
+    <string name="pdf_thanks">आपके व्यापार के लिए धन्यवाद</string>
+    <string name="pdf_page">पृष्ठ %1$d</string>
+    <string name="pdf_notes">टिप्पणी: %1$s</string>
+</resources>

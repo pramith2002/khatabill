@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons -->
+    <string name="btn_next">Next</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_finish">Finish</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_ok">OK</string>
+    <string name="search_hint">Search</string>
+    <string name="picker_choose_state">Choose state</string>
+
+    <!-- Field errors -->
+    <string name="err_required">This is required</string>
+    <string name="err_mobile">Enter a 10-digit mobile number</string>
+    <string name="err_pincode">Enter a 6-digit pincode</string>
+    <string name="err_gstin_length">GSTIN must be 15 characters</string>
+    <string name="err_gstin_format">GSTIN format is wrong</string>
+    <string name="err_gstin_state">GSTIN state code is not valid</string>
+    <string name="err_gstin_checksum">GSTIN last character is wrong, please check again</string>
+    <string name="err_pan">PAN format is wrong</string>
+    <string name="err_upi">UPI ID is wrong (example: name@bank)</string>
+    <string name="err_account_no">Account number must be 6 to 20 digits</string>
+    <string name="err_ifsc">IFSC is wrong</string>
+    <string name="err_prefix">Use at most 2 letters or digits</string>
+    <string name="err_number">Enter a valid number</string>
+
+    <!-- Units -->
+    <string name="unit_kg">kg</string>
+    <string name="unit_g">g</string>
+    <string name="unit_pcs">pcs</string>
+    <string name="unit_box">box</string>
+    <string name="unit_dozen">dozen</string>
+    <string name="unit_metre">metre</string>
+    <string name="unit_litre">litre</string>
+    <string name="unit_bundle">bundle</string>
+    <string name="unit_carton">carton</string>
+    <string name="unit_pack">pack</string>
+
+    <!-- GST states and union territories (by GST state code) -->
+    <string name="state_01">Jammu and Kashmir</string>
+    <string name="state_02">Himachal Pradesh</string>
+    <string name="state_03">Punjab</string>
+    <string name="state_04">Chandigarh</string>
+    <string name="state_05">Uttarakhand</string>
+    <string name="state_06">Haryana</string>
+    <string name="state_07">Delhi</string>
+    <string name="state_08">Rajasthan</string>
+    <string name="state_09">Uttar Pradesh</string>
+    <string name="state_10">Bihar</string>
+    <string name="state_11">Sikkim</string>
+    <string name="state_12">Arunachal Pradesh</string>
+    <string name="state_13">Nagaland</string>
+    <string name="state_14">Manipur</string>
+    <string name="state_15">Mizoram</string>
+    <string name="state_16">Tripura</string>
+    <string name="state_17">Meghalaya</string>
+    <string name="state_18">Assam</string>
+    <string name="state_19">West Bengal</string>
+    <string name="state_20">Jharkhand</string>
+    <string name="state_21">Odisha</string>
+    <string name="state_22">Chhattisgarh</string>
+    <string name="state_23">Madhya Pradesh</string>
+    <string name="state_24">Gujarat</string>
+    <string name="state_26">Dadra and Nagar Haveli and Daman and Diu</string>
+    <string name="state_27">Maharashtra</string>
+    <string name="state_28">Andhra Pradesh (before division)</string>
+    <string name="state_29">Karnataka</string>
+    <string name="state_30">Goa</string>
+    <string name="state_31">Lakshadweep</string>
+    <string name="state_32">Kerala</string>
+    <string name="state_33">Tamil Nadu</string>
+    <string name="state_34">Puducherry</string>
+    <string name="state_35">Andaman and Nicobar Islands</string>
+    <string name="state_36">Telangana</string>
+    <string name="state_37">Andhra Pradesh</string>
+    <string name="state_38">Ladakh</string>
+    <string name="state_97">Other Territory</string>
+    <string name="state_99">Centre Jurisdiction</string>
+</resources>

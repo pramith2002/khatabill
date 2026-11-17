@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AppCompat base is required for AppCompatDelegate.setApplicationLocales (language without restart). -->
+    <style name="Theme.KhataBill" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

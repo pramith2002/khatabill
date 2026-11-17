@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parties_hint">नाम या फ़ोन से खोजें</string>
+    <string name="parties_empty">अभी कोई ग्राहक या सप्लायर नहीं है</string>
+    <string name="parties_empty_hint">पहला जोड़ने के लिए “पार्टी जोड़ें” दबाएँ</string>
+    <string name="party_add">पार्टी जोड़ें</string>
+    <string name="party_title_new">नई पार्टी</string>
+    <string name="party_title_edit">पार्टी बदलें</string>
+
+    <string name="field_party_name">नाम</string>
+    <string name="field_name_kn">कन्नड़ में नाम (वैकल्पिक)</string>
+    <string name="field_phone">फ़ोन (वैकल्पिक)</string>
+    <string name="field_whatsapp">व्हाट्सऐप नंबर (वैकल्पिक)</string>
+    <string name="field_gstin_optional">GSTIN (वैकल्पिक)</string>
+    <string name="field_billing_address">बिलिंग पता (वैकल्पिक)</string>
+    <string name="field_shipping_address">शिपिंग पता (वैकल्पिक)</string>
+    <string name="field_state_optional">राज्य (वैकल्पिक)</string>
+    <string name="field_party_type">प्रकार</string>
+    <string name="party_type_customer">ग्राहक</string>
+    <string name="party_type_supplier">सप्लायर</string>
+    <string name="party_type_both">दोनों</string>
+    <string name="field_opening_balance">शुरुआती बकाया (₹)</string>
+    <string name="balance_to_collect">उन्हें मुझे देना है (वसूली)</string>
+    <string name="balance_to_pay">मुझे उन्हें देना है (भुगतान)</string>
+    <string name="field_credit_limit">उधार सीमा (₹, वैकल्पिक)</string>
+    <string name="field_notes">टिप्पणी (वैकल्पिक)</string>
+
+    <string name="party_delete_title">क्या इस पार्टी को हटाएँ?</string>
+    <string name="party_delete_message">पुराने बिलों में यह नाम बना रहेगा।</string>
+</resources>

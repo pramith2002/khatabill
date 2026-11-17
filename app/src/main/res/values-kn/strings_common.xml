@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons -->
+    <string name="btn_next">ಮುಂದೆ</string>
+    <string name="btn_back">ಹಿಂದೆ</string>
+    <string name="btn_finish">ಮುಗಿಸಿ</string>
+    <string name="btn_save">ಉಳಿಸಿ</string>
+    <string name="btn_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="btn_add">ಸೇರಿಸಿ</string>
+    <string name="btn_edit">ಸಂಪಾದಿಸಿ</string>
+    <string name="btn_delete">ಅಳಿಸಿ</string>
+    <string name="btn_close">ಮುಚ್ಚಿ</string>
+    <string name="btn_ok">ಸರಿ</string>
+    <string name="search_hint">ಹುಡುಕಿ</string>
+    <string name="picker_choose_state">ರಾಜ್ಯ ಆಯ್ಕೆಮಾಡಿ</string>
+
+    <!-- Field errors -->
+    <string name="err_required">ಇದು ಅಗತ್ಯ</string>
+    <string name="err_mobile">10 ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+    <string name="err_pincode">6 ಅಂಕಿಯ ಪಿನ್‌ಕೋಡ್ ನಮೂದಿಸಿ</string>
+    <string name="err_gstin_length">GSTIN 15 ಅಕ್ಷರಗಳಿರಬೇಕು</string>
+    <string name="err_gstin_format">GSTIN ರೂಪ ತಪ್ಪಾಗಿದೆ</string>
+    <string name="err_gstin_state">GSTIN ನ ರಾಜ್ಯ ಕೋಡ್ ಸರಿಯಿಲ್ಲ</string>
+    <string name="err_gstin_checksum">GSTIN ನ ಕೊನೆಯ ಅಕ್ಷರ ತಪ್ಪಾಗಿದೆ, ಮತ್ತೊಮ್ಮೆ ಪರಿಶೀಲಿಸಿ</string>
+    <string name="err_pan">PAN ರೂಪ ತಪ್ಪಾಗಿದೆ</string>
+    <string name="err_upi">UPI ಐಡಿ ತಪ್ಪಾಗಿದೆ (ಉದಾ: name@bank)</string>
+    <string name="err_account_no">ಖಾತೆ ಸಂಖ್ಯೆ 6 ರಿಂದ 20 ಅಂಕಿಗಳಿರಬೇಕು</string>
+    <string name="err_ifsc">IFSC ತಪ್ಪಾಗಿದೆ</string>
+    <string name="err_prefix">ಗರಿಷ್ಠ 2 ಅಕ್ಷರ ಅಥವಾ ಅಂಕಿ ಮಾತ್ರ</string>
+    <string name="err_number">ಸರಿಯಾದ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+
+    <!-- Units -->
+    <string name="unit_kg">ಕಿಲೋ</string>
+    <string name="unit_g">ಗ್ರಾಂ</string>
+    <string name="unit_pcs">ಸಂಖ್ಯೆ</string>
+    <string name="unit_box">ಪೆಟ್ಟಿಗೆ</string>
+    <string name="unit_dozen">ಡಜನ್</string>
+    <string name="unit_metre">ಮೀಟರ್</string>
+    <string name="unit_litre">ಲೀಟರ್</string>
+    <string name="unit_bundle">ಕಟ್ಟು</string>
+    <string name="unit_carton">ಕಾರ್ಟನ್</string>
+    <string name="unit_pack">ಪ್ಯಾಕ್</string>
+
+    <!-- GST states and union territories (by GST state code) -->
+    <string name="state_01">ಜಮ್ಮು ಮತ್ತು ಕಾಶ್ಮೀರ</string>
+    <string name="state_02">ಹಿಮಾಚಲ ಪ್ರದೇಶ</string>
+    <string name="state_03">ಪಂಜಾಬ್</string>
+    <string name="state_04">ಚಂಡೀಗಢ</string>
+    <string name="state_05">ಉತ್ತರಾಖಂಡ</string>
+    <string name="state_06">ಹರಿಯಾಣ</string>
+    <string name="state_07">ದೆಹಲಿ</string>
+    <string name="state_08">ರಾಜಸ್ಥಾನ</string>
+    <string name="state_09">ಉತ್ತರ ಪ್ರದೇಶ</string>
+    <string name="state_10">ಬಿಹಾರ</string>
+    <string name="state_11">ಸಿಕ್ಕಿಂ</string>
+    <string name="state_12">ಅರುಣಾಚಲ ಪ್ರದೇಶ</string>
+    <string name="state_13">ನಾಗಾಲ್ಯಾಂಡ್</string>
+    <string name="state_14">ಮಣಿಪುರ</string>
+    <string name="state_15">ಮಿಜೋರಾಂ</string>
+    <string name="state_16">ತ್ರಿಪುರ</string>
+    <string name="state_17">ಮೇಘಾಲಯ</string>
+    <string name="state_18">ಅಸ್ಸಾಂ</string>
+    <string name="state_19">ಪಶ್ಚಿಮ ಬಂಗಾಳ</string>
+    <string name="state_20">ಜಾರ್ಖಂಡ್</string>
+    <string name="state_21">ಒಡಿಶಾ</string>
+    <string name="state_22">ಛತ್ತೀಸ್‌ಗಢ</string>
+    <string name="state_23">ಮಧ್ಯ ಪ್ರದೇಶ</string>
+    <string name="state_24">ಗುಜರಾತ್</string>
+    <string name="state_26">ದಾದ್ರಾ ಮತ್ತು ನಗರ ಹವೇಲಿ ಮತ್ತು ದಮನ್ ಮತ್ತು ದಿಯು</string>
+    <string name="state_27">ಮಹಾರಾಷ್ಟ್ರ</string>
+    <string name="state_28">ಆಂಧ್ರ ಪ್ರದೇಶ (ವಿಭಜನೆಗೆ ಮುಂಚೆ)</string>
+    <string name="state_29">ಕರ್ನಾಟಕ</string>
+    <string name="state_30">ಗೋವಾ</string>
+    <string name="state_31">ಲಕ್ಷದ್ವೀಪ</string>
+    <string name="state_32">ಕೇರಳ</string>
+    <string name="state_33">ತಮಿಳುನಾಡು</string>
+    <string name="state_34">ಪುದುಚೇರಿ</string>
+    <string name="state_35">ಅಂಡಮಾನ್ ಮತ್ತು ನಿಕೋಬಾರ್ ದ್ವೀಪಗಳು</string>
+    <string name="state_36">ತೆಲಂಗಾಣ</string>
+    <string name="state_37">ಆಂಧ್ರ ಪ್ರದೇಶ</string>
+    <string name="state_38">ಲಡಾಖ್</string>
+    <string name="state_97">ಇತರ ಪ್ರದೇಶ</string>
+    <string name="state_99">ಕೇಂದ್ರ ವ್ಯಾಪ್ತಿ</string>
+</resources>

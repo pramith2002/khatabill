@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons -->
+    <string name="btn_next">आगे</string>
+    <string name="btn_back">पीछे</string>
+    <string name="btn_finish">पूरा करें</string>
+    <string name="btn_save">सहेजें</string>
+    <string name="btn_cancel">रद्द करें</string>
+    <string name="btn_add">जोड़ें</string>
+    <string name="btn_edit">बदलें</string>
+    <string name="btn_delete">हटाएँ</string>
+    <string name="btn_close">बंद करें</string>
+    <string name="btn_ok">ठीक है</string>
+    <string name="search_hint">खोजें</string>
+    <string name="picker_choose_state">राज्य चुनें</string>
+
+    <!-- Field errors -->
+    <string name="err_required">यह ज़रूरी है</string>
+    <string name="err_mobile">10 अंकों का मोबाइल नंबर डालें</string>
+    <string name="err_pincode">6 अंकों का पिनकोड डालें</string>
+    <string name="err_gstin_length">GSTIN 15 अक्षरों का होना चाहिए</string>
+    <string name="err_gstin_format">GSTIN का रूप गलत है</string>
+    <string name="err_gstin_state">GSTIN का राज्य कोड सही नहीं है</string>
+    <string name="err_gstin_checksum">GSTIN का अंतिम अक्षर गलत है, फिर से जाँचें</string>
+    <string name="err_pan">PAN का रूप गलत है</string>
+    <string name="err_upi">UPI ID गलत है (जैसे name@bank)</string>
+    <string name="err_account_no">खाता संख्या 6 से 20 अंकों की होनी चाहिए</string>
+    <string name="err_ifsc">IFSC गलत है</string>
+    <string name="err_prefix">अधिकतम 2 अक्षर या अंक</string>
+    <string name="err_number">सही संख्या डालें</string>
+
+    <!-- Units -->
+    <string name="unit_kg">किलो</string>
+    <string name="unit_g">ग्राम</string>
+    <string name="unit_pcs">नग</string>
+    <string name="unit_box">डिब्बा</string>
+    <string name="unit_dozen">दर्जन</string>
+    <string name="unit_metre">मीटर</string>
+    <string name="unit_litre">लीटर</string>
+    <string name="unit_bundle">बंडल</string>
+    <string name="unit_carton">कार्टन</string>
+    <string name="unit_pack">पैक</string>
+
+    <!-- GST states and union territories (by GST state code) -->
+    <string name="state_01">जम्मू और कश्मीर</string>
+    <string name="state_02">हिमाचल प्रदेश</string>
+    <string name="state_03">पंजाब</string>
+    <string name="state_04">चंडीगढ़</string>
+    <string name="state_05">उत्तराखंड</string>
+    <string name="state_06">हरियाणा</string>
+    <string name="state_07">दिल्ली</string>
+    <string name="state_08">राजस्थान</string>
+    <string name="state_09">उत्तर प्रदेश</string>
+    <string name="state_10">बिहार</string>
+    <string name="state_11">सिक्किम</string>
+    <string name="state_12">अरुणाचल प्रदेश</string>
+    <string name="state_13">नागालैंड</string>
+    <string name="state_14">मणिपुर</string>
+    <string name="state_15">मिज़ोरम</string>
+    <string name="state_16">त्रिपुरा</string>
+    <string name="state_17">मेघालय</string>
+    <string name="state_18">असम</string>
+    <string name="state_19">पश्चिम बंगाल</string>
+    <string name="state_20">झारखंड</string>
+    <string name="state_21">ओडिशा</string>
+    <string name="state_22">छत्तीसगढ़</string>
+    <string name="state_23">मध्य प्रदेश</string>
+    <string name="state_24">गुजरात</string>
+    <string name="state_26">दादरा और नगर हवेली तथा दमन और दीव</string>
+    <string name="state_27">महाराष्ट्र</string>
+    <string name="state_28">आंध्र प्रदेश (विभाजन से पहले)</string>
+    <string name="state_29">कर्नाटक</string>
+    <string name="state_30">गोवा</string>
+    <string name="state_31">लक्षद्वीप</string>
+    <string name="state_32">केरल</string>
+    <string name="state_33">तमिलनाडु</string>
+    <string name="state_34">पुदुच्चेरी</string>
+    <string name="state_35">अंडमान और निकोबार द्वीप समूह</string>
+    <string name="state_36">तेलंगाना</string>
+    <string name="state_37">आंध्र प्रदेश</string>
+    <string name="state_38">लद्दाख</string>
+    <string name="state_97">अन्य क्षेत्र</string>
+    <string name="state_99">केंद्रीय क्षेत्राधिकार</string>
+</resources>

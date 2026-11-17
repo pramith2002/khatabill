@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parties_hint">Search by name or phone</string>
+    <string name="parties_empty">No customers or suppliers yet</string>
+    <string name="parties_empty_hint">Tap Add party to save your first one</string>
+    <string name="party_add">Add party</string>
+    <string name="party_title_new">New party</string>
+    <string name="party_title_edit">Edit party</string>
+
+    <string name="field_party_name">Name</string>
+    <string name="field_name_kn">Name in Kannada (optional)</string>
+    <string name="field_phone">Phone (optional)</string>
+    <string name="field_whatsapp">WhatsApp number (optional)</string>
+    <string name="field_gstin_optional">GSTIN (optional)</string>
+    <string name="field_billing_address">Billing address (optional)</string>
+    <string name="field_shipping_address">Shipping address (optional)</string>
+    <string name="field_state_optional">State (optional)</string>
+    <string name="field_party_type">Type</string>
+    <string name="party_type_customer">Customer</string>
+    <string name="party_type_supplier">Supplier</string>
+    <string name="party_type_both">Both</string>
+    <string name="field_opening_balance">Opening balance (₹)</string>
+    <string name="balance_to_collect">They owe me (to collect)</string>
+    <string name="balance_to_pay">I owe them (to pay)</string>
+    <string name="field_credit_limit">Credit limit (₹, optional)</string>
+    <string name="field_notes">Notes (optional)</string>
+
+    <string name="party_delete_title">Delete this party?</string>
+    <string name="party_delete_message">Old bills keep this name.</string>
+</resources>

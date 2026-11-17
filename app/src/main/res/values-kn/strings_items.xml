@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="items_hint">ಹೆಸರು, ಕೋಡ್ ಅಥವಾ ಬಾರ್‌ಕೋಡ್ ಮೂಲಕ ಹುಡುಕಿ</string>
+    <string name="items_empty">ಇನ್ನೂ ಸರಕುಗಳಿಲ್ಲ</string>
+    <string name="items_empty_hint">ಮೊದಲ ಸರಕನ್ನು ಉಳಿಸಲು “ಸರಕು ಸೇರಿಸಿ” ಒತ್ತಿ</string>
+    <string name="item_add">ಸರಕು ಸೇರಿಸಿ</string>
+    <string name="item_title_new">ಹೊಸ ಸರಕು</string>
+    <string name="item_title_edit">ಸರಕು ಸಂಪಾದನೆ</string>
+
+    <string name="field_item_name">ಸರಕಿನ ಹೆಸರು</string>
+    <string name="field_item_type">ವಿಧ</string>
+    <string name="itype_product">ವಸ್ತು</string>
+    <string name="itype_service">ಸೇವೆ</string>
+    <string name="field_unit">ಘಟಕ</string>
+    <string name="field_barcode">ಬಾರ್‌ಕೋಡ್ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_sku">ಸರಕು ಕೋಡ್ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_hsn">HSN ಅಥವಾ SAC ಕೋಡ್ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_gst_rate">GST ದರ</string>
+    <string name="field_tax_inclusive">ಬೆಲೆಯಲ್ಲಿ GST ಸೇರಿದೆ</string>
+    <string name="field_sale_price">ಮಾರಾಟ ಬೆಲೆ (₹)</string>
+    <string name="field_purchase_price">ಖರೀದಿ ಬೆಲೆ (₹)</string>
+    <string name="field_mrp">MRP (₹, ಐಚ್ಛಿಕ)</string>
+    <string name="field_min_stock">ಇದಕ್ಕಿಂತ ಕಡಿಮೆಯಾದರೆ ಎಚ್ಚರಿಕೆ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_opening_stock">ಈಗ ಇರುವ ದಾಸ್ತಾನು (ಐಚ್ಛಿಕ)</string>
+    <string name="field_category">ವರ್ಗ</string>
+    <string name="category_none">ವರ್ಗ ಇಲ್ಲ</string>
+    <string name="category_new_hint">ಹೊಸ ವರ್ಗದ ಹೆಸರು</string>
+
+    <string name="err_barcode_exists">ಈ ಬಾರ್‌ಕೋಡ್ ಬೇರೆ ಸರಕಿಗೆ ಈಗಾಗಲೇ ಇದೆ</string>
+
+    <string name="item_stock">ದಾಸ್ತಾನು</string>
+    <string name="item_low_stock">ಕಡಿಮೆ ದಾಸ್ತಾನು</string>
+    <string name="stock_history">ದಾಸ್ತಾನು ಇತಿಹಾಸ</string>
+    <string name="stock_adjust">ದಾಸ್ತಾನು ಸರಿಪಡಿಸಿ</string>
+    <string name="stock_in">ದಾಸ್ತಾನು ಸೇರಿಸಿ</string>
+    <string name="stock_out">ದಾಸ್ತಾನು ಕಡಿಮೆ ಮಾಡಿ</string>
+    <string name="field_quantity">ಪ್ರಮಾಣ</string>
+    <string name="field_note">ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)</string>
+    <string name="reason_sale">ಮಾರಾಟ</string>
+    <string name="reason_purchase">ಖರೀದಿ</string>
+    <string name="reason_return">ಹಿಂತಿರುಗಿಸಿದ್ದು</string>
+    <string name="reason_adjustment">ಸರಿಪಡಿಕೆ</string>
+    <string name="reason_opening">ಆರಂಭಿಕ ದಾಸ್ತಾನು</string>
+
+    <string name="amount_rupees">₹%1$s</string>
+    <string name="qty_unit">%1$s %2$s</string>
+    <string name="percent_value">%1$s%%</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Document types -->
+    <string name="doc_sale">ಮಾರಾಟ</string>
+    <string name="doc_purchase">ಖರೀದಿ</string>
+    <string name="doc_quotation">ಕೊಟೇಶನ್</string>
+    <string name="doc_title_tax_invoice">ತೆರಿಗೆ ಇನ್‌ವಾಯ್ಸ್</string>
+    <string name="doc_title_bill_of_supply">ಪೂರೈಕೆ ಬಿಲ್</string>
+    <string name="doc_title_quotation">ಕೊಟೇಶನ್</string>
+    <string name="doc_title_purchase">ಖರೀದಿ ಬಿಲ್</string>
+
+    <!-- Bill list -->
+    <string name="invoices_empty">ಇನ್ನೂ ಬಿಲ್‌ಗಳಿಲ್ಲ</string>
+    <string name="invoices_empty_hint">ಮೊದಲ ಬಿಲ್ ಮಾಡಲು “ಹೊಸ ಬಿಲ್” ಒತ್ತಿ</string>
+    <string name="invoice_new">ಹೊಸ ಬಿಲ್</string>
+    <string name="walk_in_customer">ಸಾಮಾನ್ಯ ಗ್ರಾಹಕ</string>
+    <string name="status_unpaid">ಬಾಕಿ ಇದೆ</string>
+    <string name="status_partial">ಭಾಗಶಃ ಪಾವತಿ</string>
+    <string name="status_paid">ಪಾವತಿಯಾಗಿದೆ</string>
+    <string name="status_cancelled">ರದ್ದಾಗಿದೆ</string>
+    <string name="status_draft">ಕರಡು</string>
+
+    <!-- New bill -->
+    <string name="field_party">ಗ್ರಾಹಕ ಅಥವಾ ವ್ಯಕ್ತಿ</string>
+    <string name="party_choose">ವ್ಯಕ್ತಿಯನ್ನು ಆರಿಸಿ</string>
+    <string name="party_walk_in_option">ಸಾಮಾನ್ಯ ಗ್ರಾಹಕ (ಹೆಸರಿಲ್ಲ)</string>
+    <string name="field_date">ದಿನಾಂಕ</string>
+    <string name="field_place_of_supply">ಪೂರೈಕೆ ಸ್ಥಳ</string>
+    <string name="field_supplier_state">ಪೂರೈಕೆದಾರರ ರಾಜ್ಯ</string>
+    <string name="add_item">ಸರಕು ಸೇರಿಸಿ</string>
+    <string name="picker_choose_item">ಸರಕು ಆರಿಸಿ</string>
+    <string name="line_qty">ಪ್ರಮಾಣ</string>
+    <string name="line_rate">ದರ (₹)</string>
+    <string name="line_discount">ರಿಯಾಯಿತಿ</string>
+    <string name="discount_percent_short">%</string>
+    <string name="discount_amount_short">₹</string>
+    <string name="line_remove">ಸರಕು ತೆಗೆಯಿರಿ</string>
+    <string name="field_overall_discount">ಒಟ್ಟು ರಿಯಾಯಿತಿ</string>
+    <string name="field_other_charges">ಹೆಚ್ಚುವರಿ ಶುಲ್ಕ (₹)</string>
+    <string name="field_paid_now">ಈಗ ಪಡೆದ ಹಣ (₹)</string>
+    <string name="field_invoice_notes">ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)</string>
+    <string name="btn_save_bill">ಬಿಲ್ ಉಳಿಸಿ</string>
+    <string name="err_no_items">ಕನಿಷ್ಠ ಒಂದು ಸರಕು ಸೇರಿಸಿ</string>
+    <string name="err_check_numbers">ಮೇಲಿನ ಸಂಖ್ಯೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="err_paid_more">ಪಡೆದ ಹಣ ಒಟ್ಟು ಮೊತ್ತಕ್ಕಿಂತ ಹೆಚ್ಚಿದೆ</string>
+
+    <!-- Totals -->
+    <string name="total_subtotal">ಉಪ ಮೊತ್ತ</string>
+    <string name="total_discount">ರಿಯಾಯಿತಿ</string>
+    <string name="total_taxable">ತೆರಿಗೆಗೆ ಒಳಪಡುವ ಮೊತ್ತ</string>
+    <string name="total_cgst">CGST</string>
+    <string name="total_sgst">SGST</string>
+    <string name="total_igst">IGST</string>
+    <string name="total_other">ಹೆಚ್ಚುವರಿ ಶುಲ್ಕ</string>
+    <string name="total_roundoff">ಪೂರ್ಣಾಂಕ</string>
+    <string name="total_grand">ಒಟ್ಟು</string>
+    <string name="total_paid">ಪಡೆದದ್ದು</string>
+    <string name="total_due">ಬಾಕಿ ಮೊತ್ತ</string>
+
+    <!-- Bill detail -->
+    <string name="invoice_number">ಬಿಲ್ ಸಂಖ್ಯೆ</string>
+    <string name="invoice_bill_to">ಇವರಿಗೆ ಬಿಲ್</string>
+    <string name="invoice_share">PDF ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="invoice_pdf_failed">PDF ಮಾಡಲು ಆಗಲಿಲ್ಲ</string>
+    <string name="invoice_cancel">ಬಿಲ್ ರದ್ದುಮಾಡಿ</string>
+    <string name="invoice_cancel_title">ಈ ಬಿಲ್ ರದ್ದುಮಾಡಬೇಕೇ?</string>
+    <string name="invoice_cancel_hint">ಬಿಲ್ ಸಂಖ್ಯೆ ಬಳಕೆಯಲ್ಲೇ ಇರುತ್ತದೆ ಮತ್ತು ದಾಸ್ತಾನು ಮರಳಿ ಸೇರುತ್ತದೆ.</string>
+    <string name="field_cancel_reason">ಕಾರಣ</string>
+    <string name="invoice_cancelled_reason">ರದ್ದಾಗಿದೆ: %1$s</string>
+
+    <!-- PDF -->
+    <string name="pdf_gstin">GSTIN: %1$s</string>
+    <string name="pdf_phone">ಫೋನ್: %1$s</string>
+    <string name="pdf_date">ದಿನಾಂಕ: %1$s</string>
+    <string name="pdf_place_of_supply">ಪೂರೈಕೆ ಸ್ಥಳ: %1$s</string>
+    <string name="pdf_col_item">ಸರಕು</string>
+    <string name="pdf_col_hsn">HSN</string>
+    <string name="pdf_col_qty">ಪ್ರಮಾಣ</string>
+    <string name="pdf_col_rate">ದರ</string>
+    <string name="pdf_col_discount">ರಿಯಾ.</string>
+    <string name="pdf_col_taxable">ತೆರಿಗೆ ಮೊತ್ತ</string>
+    <string name="pdf_col_gst">GST</string>
+    <string name="pdf_col_amount">ಮೊತ್ತ</string>
+    <string name="pdf_amount_in_words">ಮೊತ್ತ ಅಕ್ಷರಗಳಲ್ಲಿ (ಇಂಗ್ಲಿಷ್)</string>
+    <string name="pdf_bank_details">ಬ್ಯಾಂಕ್ ವಿವರ</string>
+    <string name="pdf_bank_name">ಬ್ಯಾಂಕ್: %1$s</string>
+    <string name="pdf_account_no">ಖಾತೆ ಸಂ.: %1$s</string>
+    <string name="pdf_ifsc">IFSC: %1$s</string>
+    <string name="pdf_upi">UPI: %1$s</string>
+    <string name="pdf_signatory">ಅಧಿಕೃತ ಸಹಿ</string>
+    <string name="pdf_thanks">ನಿಮ್ಮ ವ್ಯಾಪಾರಕ್ಕೆ ಧನ್ಯವಾದಗಳು</string>
+    <string name="pdf_page">ಪುಟ %1$d</string>
+    <string name="pdf_notes">ಟಿಪ್ಪಣಿ: %1$s</string>
+</resources>

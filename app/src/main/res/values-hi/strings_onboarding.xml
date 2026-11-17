@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_step_of">चरण %1$d / %2$d</string>
+    <string name="setup_title_shop">आपकी दुकान</string>
+    <string name="setup_hint_shop">यह आपके बिलों पर छपेगा</string>
+    <string name="setup_title_gst">GST और व्यापार का प्रकार</string>
+    <string name="setup_hint_gst">GST नहीं है? आखिरी विकल्प चुनें। सादे बिल बना सकते हैं।</string>
+    <string name="setup_title_pay">भुगतान और बिल नंबर</string>
+    <string name="setup_hint_pay">सब वैकल्पिक है। UPI ID बिल के भुगतान QR में काम आती है।</string>
+
+    <string name="field_shop_name">दुकान का नाम</string>
+    <string name="field_owner_name">मालिक का नाम</string>
+    <string name="field_mobile">मोबाइल नंबर</string>
+    <string name="field_address">पता</string>
+    <string name="field_city">शहर</string>
+    <string name="field_pincode">पिनकोड</string>
+
+    <string name="gst_choice_title">क्या आपके पास GST है?</string>
+    <string name="gst_regular">हाँ, GST है</string>
+    <string name="gst_composition">कंपोज़िशन योजना</string>
+    <string name="gst_none">GST नहीं (बिल ऑफ़ सप्लाई)</string>
+    <string name="field_gstin">GSTIN</string>
+    <string name="field_pan">PAN (वैकल्पिक)</string>
+    <string name="field_state">राज्य</string>
+    <string name="state_from_gstin">राज्य आपके GSTIN से लिया गया है</string>
+    <string name="field_business_type">व्यापार का प्रकार</string>
+    <string name="btype_agarbatti">अगरबत्ती</string>
+    <string name="btype_silk">रेशम और हस्तशिल्प</string>
+    <string name="btype_food">खाना और मिठाई</string>
+    <string name="btype_garments">कपड़े</string>
+    <string name="btype_general">सामान्य व्यापारी</string>
+    <string name="btype_manufacturer">निर्माता</string>
+
+    <string name="field_upi">UPI ID (वैकल्पिक)</string>
+    <string name="field_bank_name">बैंक का नाम (वैकल्पिक)</string>
+    <string name="field_account_no">खाता संख्या (वैकल्पिक)</string>
+    <string name="field_ifsc">IFSC (वैकल्पिक)</string>
+    <string name="field_prefix">बिल नंबर का उपसर्ग, अधिकतम 2 अक्षर (वैकल्पिक)</string>
+</resources>

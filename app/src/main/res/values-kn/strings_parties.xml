@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parties_hint">ಹೆಸರು ಅಥವಾ ಫೋನ್ ಮೂಲಕ ಹುಡುಕಿ</string>
+    <string name="parties_empty">ಇನ್ನೂ ಗ್ರಾಹಕರು ಅಥವಾ ಪೂರೈಕೆದಾರರು ಇಲ್ಲ</string>
+    <string name="parties_empty_hint">ಮೊದಲನೆಯದನ್ನು ಉಳಿಸಲು “ವ್ಯಕ್ತಿ ಸೇರಿಸಿ” ಒತ್ತಿ</string>
+    <string name="party_add">ವ್ಯಕ್ತಿ ಸೇರಿಸಿ</string>
+    <string name="party_title_new">ಹೊಸ ವ್ಯಕ್ತಿ</string>
+    <string name="party_title_edit">ವ್ಯಕ್ತಿ ಸಂಪಾದನೆ</string>
+
+    <string name="field_party_name">ಹೆಸರು</string>
+    <string name="field_name_kn">ಕನ್ನಡದಲ್ಲಿ ಹೆಸರು (ಐಚ್ಛಿಕ)</string>
+    <string name="field_phone">ಫೋನ್ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_whatsapp">ವಾಟ್ಸಾಪ್ ಸಂಖ್ಯೆ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_gstin_optional">GSTIN (ಐಚ್ಛಿಕ)</string>
+    <string name="field_billing_address">ಬಿಲ್ಲಿಂಗ್ ವಿಳಾಸ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_shipping_address">ಸಾಗಣೆ ವಿಳಾಸ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_state_optional">ರಾಜ್ಯ (ಐಚ್ಛಿಕ)</string>
+    <string name="field_party_type">ವಿಧ</string>
+    <string name="party_type_customer">ಗ್ರಾಹಕ</string>
+    <string name="party_type_supplier">ಪೂರೈಕೆದಾರ</string>
+    <string name="party_type_both">ಇಬ್ಬರೂ</string>
+    <string name="field_opening_balance">ಆರಂಭಿಕ ಬಾಕಿ (₹)</string>
+    <string name="balance_to_collect">ಅವರು ನನಗೆ ಕೊಡಬೇಕು (ವಸೂಲಿ)</string>
+    <string name="balance_to_pay">ನಾನು ಅವರಿಗೆ ಕೊಡಬೇಕು (ಪಾವತಿ)</string>
+    <string name="field_credit_limit">ಸಾಲದ ಮಿತಿ (₹, ಐಚ್ಛಿಕ)</string>
+    <string name="field_notes">ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)</string>
+
+    <string name="party_delete_title">ಈ ವ್ಯಕ್ತಿಯನ್ನು ಅಳಿಸಬೇಕೇ?</string>
+    <string name="party_delete_message">ಹಳೆಯ ಬಿಲ್‌ಗಳಲ್ಲಿ ಈ ಹೆಸರು ಹಾಗೆಯೇ ಇರುತ್ತದೆ.</string>
+</resources>

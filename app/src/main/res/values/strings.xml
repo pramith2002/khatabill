@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KhataBill</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_parties">Parties</string>
+    <string name="nav_billing">Billing</string>
+    <string name="nav_items">Items</string>
+    <string name="nav_more">More</string>
+
+    <!-- Language -->
+    <string name="language_title">Choose your language</string>
+    <string name="language_hint">You can change this later in More</string>
+    <string name="language_section">Language</string>
+    <string name="language_selected">Selected</string>
+    <string name="lang_en">English</string>
+    <string name="lang_kn">ಕನ್ನಡ</string>
+    <string name="lang_hi">हिन्दी</string>
+
+    <!-- Placeholder tabs -->
+    <string name="coming_soon">Coming soon</string>
+    <string name="coming_soon_hint">This screen will be built in a later phase</string>
+
+</resources>
