@@ -28,6 +28,8 @@
     <string name="err_ifsc">IFSC ತಪ್ಪಾಗಿದೆ</string>
     <string name="err_prefix">ಗರಿಷ್ಠ 2 ಅಕ್ಷರ ಅಥವಾ ಅಂಕಿ ಮಾತ್ರ</string>
     <string name="err_number">ಸರಿಯಾದ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+    <string name="err_save_failed">ಉಳಿಸಲಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="bill_no_items_hint">ಇನ್ನೂ ಸರಕುಗಳಿಲ್ಲ. ಮೊದಲು “ಸರಕುಗಳು” ಟ್ಯಾಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಸರಕುಗಳನ್ನು ಸೇರಿಸಿ.</string>
 
     <!-- Units -->
     <string name="unit_kg">ಕಿಲೋ</string>

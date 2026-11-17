@@ -3,6 +3,9 @@ package com.teczo.khatabill.ui.billing
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
+import com.teczo.khatabill.R
+import com.teczo.khatabill.util.scan.BarcodeScan
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
@@ -12,6 +15,7 @@ fun NewInvoiceScreen(
     onSaved: (String) -> Unit,
     viewModel: NewInvoiceViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
     val form by viewModel.form.collectAsStateWithLifecycle()
     val business by viewModel.business.collectAsStateWithLifecycle()
     val calc by viewModel.calc.collectAsStateWithLifecycle()
@@ -38,6 +42,13 @@ fun NewInvoiceScreen(
             onUpdateLine = viewModel::updateLine,
             onRemoveLine = viewModel::removeLine,
             onSave = viewModel::save,
+            onScan = {
+                BarcodeScan.start(
+                    context,
+                    onResult = viewModel::addByBarcode,
+                    onError = { viewModel.reportError(R.string.err_scan_failed) },
+                )
+            },
         ),
         creditWarning = creditWarning,
     )

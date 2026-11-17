@@ -1,6 +1,7 @@
 package com.teczo.khatabill.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -8,7 +9,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
@@ -30,20 +30,21 @@ import com.teczo.khatabill.ui.navigation.TabItem
 import com.teczo.khatabill.ui.navigation.bottomTabs
 
 /**
- * Bottom bar from the design reference: icons with a small label, a dot under the selected tab,
- * and a raised round orange button in the centre for Billing.
+ * A floating pill bar. The selected tab sits in a soft circle, and Billing is the
+ * raised round orange button in the centre.
  */
 @Composable
 fun AppBottomBar(selectedRoute: String?, onSelect: (String) -> Unit) {
-    val shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
-    Box(Modifier.fillMaxWidth()) {
+    val pill = RoundedCornerShape(36.dp)
+    Box(Modifier.fillMaxWidth().padding(horizontal = 14.dp).navigationBarsPadding().padding(bottom = 8.dp)) {
         Box(
             Modifier.fillMaxWidth().padding(top = 18.dp)
-                .shadow(14.dp, shape)
-                .background(MaterialTheme.colorScheme.surface, shape),
+                .shadow(16.dp, pill)
+                .background(MaterialTheme.colorScheme.surface, pill)
+                .border(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f), pill),
         ) {
             Row(
-                Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 6.dp, vertical = 6.dp),
+                Modifier.fillMaxWidth().padding(horizontal = 6.dp, vertical = 6.dp),
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
@@ -86,14 +87,15 @@ private fun NormalTab(tab: TabItem, selected: Boolean, onClick: () -> Unit, modi
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Icon(tab.icon, contentDescription = null, tint = tint, modifier = Modifier.size(28.dp))
-        Text(stringResource(tab.label), style = MaterialTheme.typography.labelMedium, color = tint)
-        Spacer(Modifier.height(2.dp))
         Box(
-            Modifier.size(6.dp).background(
-                if (selected) MaterialTheme.colorScheme.secondary else androidx.compose.ui.graphics.Color.Transparent,
+            Modifier.size(width = 52.dp, height = 32.dp).background(
+                if (selected) MaterialTheme.colorScheme.primaryContainer else androidx.compose.ui.graphics.Color.Transparent,
                 CircleShape,
             ),
-        )
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(tab.icon, contentDescription = null, tint = tint, modifier = Modifier.size(26.dp))
+        }
+        Text(stringResource(tab.label), style = MaterialTheme.typography.labelMedium, color = tint, modifier = Modifier.padding(top = 2.dp))
     }
 }

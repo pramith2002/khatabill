@@ -109,6 +109,18 @@ class LedgerAndStatementTest {
         assertEquals(0.4f, s.collectionRatio, 0.0001f)
     }
 
+    @Test fun homeSummaryHasSevenDayTrendsOldestFirst() {
+        val balances = LedgerRepository.compute(listOf(party("a")), emptyList(), emptyList(), today)
+        val s = HomeSummary.compute(
+            balances,
+            listOf(inv("i1", "a", 10_000, date = today), inv("i2", "a", 2_000, date = today - 6), inv("old", "a", 9_000, date = today - 7)),
+            listOf(pay("a", 4_000, date = today - 1)),
+            today,
+        )
+        assertEquals(listOf(2_000L, 0L, 0L, 0L, 0L, 0L, 10_000L), s.salesLast7)
+        assertEquals(listOf(0L, 0L, 0L, 0L, 0L, 4_000L, 0L), s.collectedLast7)
+    }
+
     @Test fun collectionRatioIsCappedAndSafeWithNoSales() {
         assertEquals(0f, HomeSummary().collectionRatio, 0f)
         assertEquals(1f, HomeSummary(monthSales = 100, monthCollected = 500).collectionRatio, 0f)

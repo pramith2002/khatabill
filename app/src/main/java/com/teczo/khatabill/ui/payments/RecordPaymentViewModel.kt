@@ -114,17 +114,29 @@ class RecordPaymentViewModel @Inject constructor(
         _error.value = null
     }
 
+    /** True while a save is running, so a double tap cannot record the payment twice. */
+    private var saving = false
+
     fun save() {
         val f = _form.value
         val biz = _business.value ?: return
         val partyId = f.partyId ?: run { _error.value = R.string.err_choose_party; return }
         val amount = MoneyInput.parsePaise(f.amount)?.takeIf { it > 0 } ?: run { _error.value = R.string.err_amount; return }
+        if (saving) return
+        saving = true
         viewModelScope.launch {
-            paymentRepository.record(
-                businessId = biz.id, type = f.type, partyId = partyId, date = f.date, amount = amount, mode = f.mode,
-                reference = f.reference, notes = f.notes, preferredInvoiceId = f.invoiceId,
-            )
-            _done.value = true
+            try {
+                paymentRepository.record(
+                    businessId = biz.id, type = f.type, partyId = partyId, date = f.date, amount = amount, mode = f.mode,
+                    reference = f.reference, notes = f.notes, preferredInvoiceId = f.invoiceId,
+                )
+                _done.value = true
+            } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+                _error.value = R.string.err_save_failed
+            } finally {
+                saving = false
+            }
         }
     }
 }

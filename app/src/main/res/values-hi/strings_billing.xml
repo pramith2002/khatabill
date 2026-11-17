@@ -91,4 +91,14 @@
     <string name="pdf_thanks">आपके व्यापार के लिए धन्यवाद</string>
     <string name="pdf_page">पृष्ठ %1$d</string>
     <string name="pdf_notes">टिप्पणी: %1$s</string>
+    <string name="quick_bill_title">क्विक बिल</string>
+    <string name="quick_bill_amount">राशि (₹)</string>
+    <string name="quick_bill_description">सामान या नोट (वैकल्पिक)</string>
+    <string name="quick_bill_default_name">क्विक बिक्री</string>
+    <string name="quick_bill_incl_hint">राशि में GST शामिल है</string>
+    <string name="quick_bill_total">कुल: ₹%1$s</string>
+    <string name="qa_quick_bill">क्विक बिल</string>
+    <string name="btn_scan_barcode">बारकोड स्कैन करें</string>
+    <string name="err_barcode_not_found">इस बारकोड का कोई सामान नहीं है</string>
+    <string name="err_scan_failed">स्कैनर नहीं खुल सका। बारकोड टाइप करें।</string>
 </resources>

@@ -17,6 +17,9 @@ data class HomeSummary(
     val monthCollected: Long = 0,
     val todaySales: Long = 0,
     val todayCollected: Long = 0,
+    /** Sales and money received for each of the last 7 days, oldest first (the trend lines). */
+    val salesLast7: List<Long> = emptyList(),
+    val collectedLast7: List<Long> = emptyList(),
 ) {
     /** Share of this month's sales that has been collected, 0..1 (the progress ring). */
     val collectionRatio: Float
@@ -37,6 +40,8 @@ data class HomeSummary(
                 monthCollected = received.filter { it.date in monthStart..monthEnd }.sumOf { it.amount },
                 todaySales = sales.filter { it.date == today }.sumOf { it.grandTotal },
                 todayCollected = received.filter { it.date == today }.sumOf { it.amount },
+                salesLast7 = (today - 6..today).map { day -> sales.filter { it.date == day }.sumOf { it.grandTotal } },
+                collectedLast7 = (today - 6..today).map { day -> received.filter { it.date == day }.sumOf { it.amount } },
             )
         }
     }

@@ -11,10 +11,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import com.teczo.khatabill.ui.components.StatTile
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -43,6 +50,7 @@ private fun rupees(paise: Long) = stringResource(R.string.amount_rupees, MoneyFo
 fun HomeScreen(
     onCollections: () -> Unit,
     onNewSale: () -> Unit,
+    onQuickBill: () -> Unit,
     onAddPayment: () -> Unit,
     onAddCustomer: () -> Unit,
     onOpenInvoice: (String) -> Unit,
@@ -50,9 +58,10 @@ fun HomeScreen(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val s = state.summary
+    val pageBackground = com.teczo.khatabill.ui.theme.pageBackground()
 
     Column(
-        Modifier.fillMaxSize().safeDrawingPadding().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp),
+        Modifier.fillMaxSize().background(pageBackground).safeDrawingPadding().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         Text(
@@ -64,7 +73,7 @@ fun HomeScreen(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(stringResource(R.string.home_to_collect), style = MaterialTheme.typography.titleMedium)
-                    Text(rupees(s.toCollect), style = MaterialTheme.typography.headlineMedium)
+                    Text(rupees(s.toCollect), style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.SemiBold)
                     AccentButton(onClick = onCollections) { Text(stringResource(R.string.home_view_collections), style = MaterialTheme.typography.labelLarge) }
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -86,19 +95,10 @@ fun HomeScreen(
 
         Text(stringResource(R.string.dash_today), style = MaterialTheme.typography.titleLarge)
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
-            WhiteCard(Modifier.weight(1f)) {
-                Text(stringResource(R.string.dash_sales), style = MaterialTheme.typography.titleSmall)
-                Text(rupees(s.todaySales), style = MaterialTheme.typography.titleLarge)
-            }
-            PeachCard(Modifier.weight(1f)) {
-                Text(stringResource(R.string.dash_collected), style = MaterialTheme.typography.titleSmall)
-                Text(rupees(s.todayCollected), style = MaterialTheme.typography.titleLarge)
-            }
+            StatTile(stringResource(R.string.dash_sales), rupees(s.todaySales), Modifier.weight(1f), trend = s.salesLast7)
+            StatTile(stringResource(R.string.dash_collected), rupees(s.todayCollected), Modifier.weight(1f), trend = s.collectedLast7, peach = true)
         }
-        WhiteCard(Modifier.fillMaxWidth()) {
-            Text(stringResource(R.string.dash_month_sales), style = MaterialTheme.typography.titleSmall)
-            Text(rupees(s.monthSales), style = MaterialTheme.typography.titleLarge)
-        }
+        StatTile(stringResource(R.string.dash_month_sales), rupees(s.monthSales), Modifier.fillMaxWidth())
 
         Text(stringResource(R.string.home_quick_actions), style = MaterialTheme.typography.titleLarge)
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
@@ -106,6 +106,7 @@ fun HomeScreen(
             QuickAction(Icons.Filled.Check, R.string.qa_add_payment, onAddPayment, Modifier.weight(1f))
             QuickAction(Icons.Filled.Person, R.string.qa_add_customer, onAddCustomer, Modifier.weight(1f))
         }
+        QuickAction(Icons.Filled.ShoppingCart, R.string.qa_quick_bill, onQuickBill, Modifier.fillMaxWidth())
 
         DashList(R.string.dash_top_items, state.topItems)
         DashList(R.string.dash_top_customers, state.topCustomers)

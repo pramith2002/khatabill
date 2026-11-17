@@ -1,5 +1,6 @@
 package com.teczo.khatabill.ui.items
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,7 +25,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import com.teczo.khatabill.util.scan.BarcodeScan
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -45,6 +48,7 @@ import com.teczo.khatabill.util.money.MoneyInput
 
 @Composable
 fun ItemEditScreen(onDone: () -> Unit, viewModel: ItemEditViewModel = hiltViewModel()) {
+    val context = LocalContext.current
     val form by viewModel.form.collectAsStateWithLifecycle()
     val errors by viewModel.errors.collectAsStateWithLifecycle()
     val done by viewModel.done.collectAsStateWithLifecycle()
@@ -115,6 +119,16 @@ fun ItemEditScreen(onDone: () -> Unit, viewModel: ItemEditViewModel = hiltViewMo
                     form.barcode, { v -> viewModel.update { it.copy(barcode = v.trim()) } }, stringResource(R.string.field_barcode),
                     error = errors[ItemField.BARCODE], capitalization = KeyboardCapitalization.None,
                 )
+                OutlinedButton(
+                    onClick = {
+                        BarcodeScan.start(
+                            context,
+                            onResult = { code -> viewModel.update { it.copy(barcode = code) } },
+                            onError = { Toast.makeText(context, R.string.err_scan_failed, Toast.LENGTH_LONG).show() },
+                        )
+                    },
+                    modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp),
+                ) { Text(stringResource(R.string.btn_scan_barcode)) }
             }
             AppTextField(form.sku, { v -> viewModel.update { it.copy(sku = v) } }, stringResource(R.string.field_sku), capitalization = KeyboardCapitalization.Characters)
             PickerField(

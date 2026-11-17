@@ -28,6 +28,8 @@
     <string name="err_ifsc">IFSC is wrong</string>
     <string name="err_prefix">Use at most 2 letters or digits</string>
     <string name="err_number">Enter a valid number</string>
+    <string name="err_save_failed">Could not save. Please try again.</string>
+    <string name="bill_no_items_hint">No items yet. Add your products in the Items tab first.</string>
 
     <!-- Units -->
     <string name="unit_kg">kg</string>

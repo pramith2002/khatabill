@@ -6,6 +6,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 
@@ -29,4 +31,15 @@ fun KhataBillTheme(content: @Composable () -> Unit) {
         shapes = AppShapes,
         content = content,
     )
+}
+
+/** The soft peach-to-pale-blue page backdrop behind the tabs (plain background in dark mode). */
+@Composable
+fun pageBackground(): Brush {
+    val colors = MaterialTheme.colorScheme
+    return if (isSystemInDarkTheme()) {
+        Brush.verticalGradient(listOf(colors.background, colors.background))
+    } else {
+        Brush.verticalGradient(listOf(Color(0xFFFFEBD6), Color(0xFFE6F1F4), Color(0xFFF8FAFA)))
+    }
 }

@@ -91,4 +91,14 @@
     <string name="pdf_thanks">Thank you for your business</string>
     <string name="pdf_page">Page %1$d</string>
     <string name="pdf_notes">Notes: %1$s</string>
+    <string name="quick_bill_title">Quick bill</string>
+    <string name="quick_bill_amount">Amount (₹)</string>
+    <string name="quick_bill_description">Item or note (optional)</string>
+    <string name="quick_bill_default_name">Quick sale</string>
+    <string name="quick_bill_incl_hint">Amount includes GST</string>
+    <string name="quick_bill_total">Total: ₹%1$s</string>
+    <string name="qa_quick_bill">Quick bill</string>
+    <string name="btn_scan_barcode">Scan barcode</string>
+    <string name="err_barcode_not_found">No item has this barcode</string>
+    <string name="err_scan_failed">Could not open the scanner. Type the barcode instead.</string>
 </resources>

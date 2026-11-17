@@ -46,7 +46,7 @@ class NewInvoiceViewModel @Inject constructor(
     savedState: SavedStateHandle,
     private val businessRepository: BusinessRepository,
     partyRepository: PartyRepository,
-    itemRepository: ItemRepository,
+    private val itemRepository: ItemRepository,
     private val invoiceRepository: InvoiceRepository,
     ledger: LedgerRepository,
 ) : ViewModel() {
@@ -105,6 +105,19 @@ class NewInvoiceViewModel @Inject constructor(
         }
     }
 
+    /** A scanned barcode adds its item to the bill (or one more unit if it is already there). */
+    fun addByBarcode(code: String) {
+        val biz = _business.value ?: return
+        viewModelScope.launch {
+            val item = itemRepository.findByBarcode(biz.id, code)
+            if (item == null) _error.value = R.string.err_barcode_not_found else addItem(item)
+        }
+    }
+
+    fun reportError(@androidx.annotation.StringRes message: Int) {
+        _error.value = message
+    }
+
     fun update(change: (InvoiceFormState) -> InvoiceFormState) {
         _form.update(change)
         _error.value = null
@@ -148,6 +161,9 @@ class NewInvoiceViewModel @Inject constructor(
             }
         }
     }
+
+    /** True while a save is running, so a double tap cannot create two bills. */
+    private var saving = false
 
     fun save() {
         val ok = calc.value as? CalcState.Ok ?: return
@@ -216,6 +232,17 @@ class NewInvoiceViewModel @Inject constructor(
                 )
             },
         )
-        viewModelScope.launch { _savedId.value = invoiceRepository.createInvoice(draft).id }
+        if (saving) return
+        saving = true
+        viewModelScope.launch {
+            try {
+                _savedId.value = invoiceRepository.createInvoice(draft).id
+            } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+                _error.value = R.string.err_save_failed
+            } finally {
+                saving = false
+            }
+        }
     }
 }

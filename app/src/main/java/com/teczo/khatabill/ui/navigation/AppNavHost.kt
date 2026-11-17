@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.foundation.background
 import androidx.compose.material3.Scaffold
+import com.teczo.khatabill.ui.theme.pageBackground
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -27,6 +29,7 @@ import com.teczo.khatabill.ui.components.AppBottomBar
 import com.teczo.khatabill.ui.billing.InvoiceDetailScreen
 import com.teczo.khatabill.ui.billing.InvoiceListScreen
 import com.teczo.khatabill.ui.billing.NewInvoiceScreen
+import com.teczo.khatabill.ui.billing.QuickBillScreen
 import com.teczo.khatabill.ui.home.HomeScreen
 import com.teczo.khatabill.ui.home.PlaceholderScreen
 import com.teczo.khatabill.ui.language.LanguageOptions
@@ -106,7 +109,7 @@ fun AppNavHost(
         NavHost(
             navController = navController,
             startDestination = startRoute,
-            modifier = Modifier.padding(padding),
+            modifier = Modifier.background(pageBackground()).padding(padding),
         ) {
             composable(Routes.LANGUAGE) {
                 LanguagePickerScreen(onSelect = { tag ->
@@ -124,6 +127,7 @@ fun AppNavHost(
                 HomeScreen(
                     onCollections = { navController.navigate(Routes.COLLECTIONS) },
                     onNewSale = { navController.navigate(Routes.invoiceNew(DocumentType.SALE.name)) },
+                    onQuickBill = { navController.navigate(Routes.QUICK_BILL) },
                     onAddPayment = { navController.navigate(Routes.paymentNew(NO_PARTY)) },
                     onAddCustomer = { navController.navigate(Routes.partyEdit(NEW_ID)) },
                     onOpenInvoice = { id -> navController.navigate(Routes.invoiceDetail(id)) },
@@ -187,6 +191,14 @@ fun AppNavHost(
                 InvoiceListScreen(
                     onNew = { type -> navController.navigate(Routes.invoiceNew(type.name)) },
                     onOpen = { id -> navController.navigate(Routes.invoiceDetail(id)) },
+                )
+            }
+            composable(Routes.QUICK_BILL) {
+                QuickBillScreen(
+                    onBack = { navController.popBackStack() },
+                    onSaved = { id ->
+                        navController.navigate(Routes.invoiceDetail(id)) { popUpTo(Routes.QUICK_BILL) { inclusive = true } }
+                    },
                 )
             }
             composable(Routes.INVOICE_NEW, arguments = listOf(navArgument("type") { type = NavType.StringType })) {

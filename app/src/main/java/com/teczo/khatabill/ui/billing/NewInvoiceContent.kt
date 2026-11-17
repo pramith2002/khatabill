@@ -70,6 +70,7 @@ class NewInvoiceActions(
     val onUpdateLine: (String, (LineState) -> LineState) -> Unit,
     val onRemoveLine: (String) -> Unit,
     val onSave: () -> Unit,
+    val onScan: () -> Unit = {},
 )
 
 @Composable
@@ -130,8 +131,15 @@ fun NewInvoiceContent(
                     onRemove = { actions.onRemoveLine(line.key) },
                 )
             }
-            OutlinedButton(onClick = { showItems = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) {
-                Text(stringResource(R.string.add_item))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                OutlinedButton(onClick = { showItems = true }, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
+                    Text(stringResource(R.string.add_item))
+                }
+                if (isSale || form.type == DocumentType.PURCHASE) {
+                    OutlinedButton(onClick = actions.onScan, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
+                        Text(stringResource(R.string.btn_scan_barcode))
+                    }
+                }
             }
 
             if (form.lines.isNotEmpty()) {
@@ -213,6 +221,9 @@ fun NewInvoiceContent(
             onSelect = { id -> items.firstOrNull { it.id == id }?.let(actions.onAddItem); showItems = false },
             onDismiss = { showItems = false },
             searchable = true,
+            footer = if (items.isEmpty()) {
+                { Text(stringResource(R.string.bill_no_items_hint), modifier = Modifier.padding(vertical = 16.dp)) }
+            } else null,
         )
     }
     if (showPlace) {

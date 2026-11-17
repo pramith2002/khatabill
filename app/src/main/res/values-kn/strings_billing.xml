@@ -91,4 +91,14 @@
     <string name="pdf_thanks">ನಿಮ್ಮ ವ್ಯಾಪಾರಕ್ಕೆ ಧನ್ಯವಾದಗಳು</string>
     <string name="pdf_page">ಪುಟ %1$d</string>
     <string name="pdf_notes">ಟಿಪ್ಪಣಿ: %1$s</string>
+    <string name="quick_bill_title">ತ್ವರಿತ ಬಿಲ್</string>
+    <string name="quick_bill_amount">ಮೊತ್ತ (₹)</string>
+    <string name="quick_bill_description">ಸರಕು ಅಥವಾ ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)</string>
+    <string name="quick_bill_default_name">ತ್ವರಿತ ಮಾರಾಟ</string>
+    <string name="quick_bill_incl_hint">ಮೊತ್ತದಲ್ಲಿ GST ಸೇರಿದೆ</string>
+    <string name="quick_bill_total">ಒಟ್ಟು: ₹%1$s</string>
+    <string name="qa_quick_bill">ತ್ವರಿತ ಬಿಲ್</string>
+    <string name="btn_scan_barcode">ಬಾರ್‌ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
+    <string name="err_barcode_not_found">ಈ ಬಾರ್‌ಕೋಡ್‌ನ ಸರಕು ಇಲ್ಲ</string>
+    <string name="err_scan_failed">ಸ್ಕ್ಯಾನರ್ ತೆರೆಯಲಾಗಲಿಲ್ಲ. ಬಾರ್‌ಕೋಡ್ ಟೈಪ್ ಮಾಡಿ.</string>
 </resources>
