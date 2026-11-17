@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">खाताबिल</string>
+    <string name="app_name">Vyro</string>
+    <string name="app_tagline">हर रुपये का हिसाब।</string>
 
     <!-- Bottom navigation -->
     <string name="nav_home">होम</string>

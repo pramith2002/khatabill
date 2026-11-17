@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ಖಾತಾಬಿಲ್</string>
+    <string name="app_name">Vyro</string>
+    <string name="app_tagline">ಪ್ರತಿ ರೂಪಾಯಿಗೂ ಲೆಕ್ಕ.</string>
 
     <!-- Bottom navigation -->
     <string name="nav_home">ಮುಖಪುಟ</string>
