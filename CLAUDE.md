@@ -13,7 +13,7 @@ Package `com.teczo.khatabill` (internal names such as KhataBill* classes are unc
 - After each phase, report: done / untested / assumed.
 
 ## Stack
-Kotlin, Jetpack Compose, Material 3, MVVM + repositories, Hilt (+ Hilt-Work), Room (schema exported, migrations tested), DataStore, WorkManager, ZXing core (QR), Android PdfDocument with bundled Noto Sans Kannada/Devanagari, FileProvider.
+Kotlin, Jetpack Compose, Material 3, MVVM + repositories, Hilt (+ Hilt-Work), Room (schema exported, migrations tested), DataStore, WorkManager, ZXing core (QR), ML Kit code scanner 16.1.0 (barcode scan, needs Google Play services), Android PdfDocument with bundled Noto Sans Kannada/Devanagari, FileProvider.
 AGP 9.5.1 (built-in Kotlin), Gradle 9.9.1, KSP, JDK 21, minSdk 26, compile/target 37.
 
 ## Key rules in the code
@@ -26,10 +26,12 @@ AGP 9.5.1 (built-in Kotlin), Gradle 9.9.1, KSP, JDK 21, minSdk 26, compile/targe
 - Design: teal #1B4B5A, orange #F5A54A, peach #FDE9D7, raised orange centre Billing button. The logo is navy/green; matching the theme to the logo is an open question.
 
 ## Status
-- Done: Phase 0-1 (foundation, GST billing, items, parties, A4 PDF), Phase 2 (payments, ledger, aging, statements, UPI QR, WhatsApp share, due reminders), Phase 3 (expenses, Day/Cash/Bank books, sales/GSTR-1/GSTR-3B style reports, CSV/PDF export, Home dashboard), Vyro rebrand.
-- Not tested: real Android phone (Android 8 / 2 GB RAM), tablet, dark mode, large font, airplane mode, low storage; WhatsApp, notification delivery and receipt camera on a device; CSV in Excel.
+- Done: Phase 4 so far: Quick bill (one-amount walk-in sale), barcode scan on bills and item edit, animated splash, new card/bottom-bar design, Plans & pricing (test mode). Earlier: Phase 0-1 (foundation, GST billing, items, parties, A4 PDF), Phase 2 (payments, ledger, aging, statements, UPI QR, WhatsApp share, due reminders), Phase 3 (expenses, Day/Cash/Bank books, sales/GSTR-1/GSTR-3B style reports, CSV/PDF export, Home dashboard), Vyro rebrand.
+- Plans: Gold / Retail Pro, 1 year. Mobile 999 / 1,699; Mobile + Desktop 5,700 / 10,479 (rupees). `domain/plans/Plans.kt`. Switching a plan on is test mode only: it saves a one-year plan in DataStore with no payment. No feature is gated yet (the Pro-only features are not built). Real purchase needs Google Play Billing (Play Console app, products, signed release build).
+- Desktop app: planned for later, not started. The Mobile + Desktop price is already listed.
+- Not tested: barcode scanner on a device; real Android phone (Android 8 / 2 GB RAM), tablet, dark mode, large font, airplane mode, low storage; WhatsApp, notification delivery and receipt camera on a device; CSV in Excel.
 - Assumed: Kannada and Hindi strings are drafts needing native review; amount-in-words is English only; logo/signature on invoices deferred; Home quick-action labels may clip on small screens.
-- Next: hardening on a real phone, then Phase 4 (barcode scan, quick bill, thermal printing, voice input, templates). Firebase sync, Play Billing, backup and app lock are not started. A signed release build needs a signing key (not created).
+- Next: hardening on a real phone, then rest of Phase 4 (thermal printing, voice input, templates; templates need a schema change). Firebase sync, Play Billing, backup and app lock are not started. A signed release build needs a signing key (not created).
 
 ## Build and test
 ```
