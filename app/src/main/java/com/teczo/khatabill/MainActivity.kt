@@ -4,7 +4,13 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Box
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import com.teczo.khatabill.ui.navigation.AppNavHost
+import com.teczo.khatabill.ui.splash.VyroSplash
 import com.teczo.khatabill.ui.theme.KhataBillTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +23,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KhataBillTheme {
-                AppNavHost()
+                // The app loads underneath while the opening animation plays on top of it.
+                var splashDone by rememberSaveable { mutableStateOf(false) }
+                Box {
+                    AppNavHost()
+                    if (!splashDone) VyroSplash(onFinished = { splashDone = true })
+                }
             }
         }
     }
