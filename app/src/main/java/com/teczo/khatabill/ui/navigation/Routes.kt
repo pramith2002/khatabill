@@ -24,6 +24,7 @@ object Routes {
     const val ITEM_DETAIL = "item_detail/{itemId}"
     const val INVOICE_NEW = "invoice_new/{type}"
     const val QUICK_BILL = "quick_bill"
+    const val PLANS = "plans"
     const val INVOICE_DETAIL = "invoice_detail/{invoiceId}"
     const val PARTY_DETAIL = "party_detail/{partyId}"
     const val PAYMENT_NEW = "payment_new/{partyId}"

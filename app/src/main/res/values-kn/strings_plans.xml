@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="more_plans">ಪ್ಲಾನ್ ಮತ್ತು ಬೆಲೆ</string>
+    <string name="plans_title">ಪ್ಲಾನ್ ಮತ್ತು ಬೆಲೆ</string>
+    <string name="plans_one_year">1 ವರ್ಷ</string>
+    <string name="plans_platform_mobile">ಮೊಬೈಲ್</string>
+    <string name="plans_platform_both">ಮೊಬೈಲ್ + ಡೆಸ್ಕ್‌ಟಾಪ್</string>
+    <string name="plans_desktop_note">ಡೆಸ್ಕ್‌ಟಾಪ್ ಆ್ಯಪ್ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ. ಬಿಡುಗಡೆಯಾದ ನಂತರ ಈ ಪ್ಲಾನ್‌ನಲ್ಲಿ ಅದು ಸೇರಿರುತ್ತದೆ.</string>
+    <string name="plans_features_header">ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ವಿವರ</string>
+    <string name="plan_gold">ಗೋಲ್ಡ್</string>
+    <string name="plan_retail_pro">ರಿಟೇಲ್ ಪ್ರೊ</string>
+    <string name="plans_per_year">ವರ್ಷಕ್ಕೆ</string>
+    <string name="plans_get">%1$s ಪಡೆಯಿರಿ</string>
+    <string name="plans_coming_soon">ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ</string>
+    <string name="feat_gst_billing">GST ಬಿಲ್ಲಿಂಗ್ ಮತ್ತು A4 PDF ಇನ್‌ವಾಯ್ಸ್</string>
+    <string name="feat_reports">GSTR-1 ಮತ್ತು GSTR-3B ಮಾದರಿಯ ವರದಿಗಳು</string>
+    <string name="feat_udhaar">ಉದ್ರಿ ಲೆಡ್ಜರ್, ಸ್ಟೇಟ್‌ಮೆಂಟ್ ಮತ್ತು ಬಾಕಿ ಜ್ಞಾಪನೆ</string>
+    <string name="feat_payments_upi">ಪಾವತಿಗಳು, UPI QR ಮತ್ತು WhatsApp ಹಂಚಿಕೆ</string>
+    <string name="feat_books">ಖರ್ಚು, ದಿನ, ನಗದು ಮತ್ತು ಬ್ಯಾಂಕ್ ಪುಸ್ತಕಗಳು</string>
+    <string name="feat_quick_bill_scan">ತ್ವರಿತ ಬಿಲ್ ಮತ್ತು ಬಾರ್‌ಕೋಡ್ ಸ್ಕ್ಯಾನ್</string>
+    <string name="feat_languages">ಕನ್ನಡ, ಹಿಂದಿ ಮತ್ತು ಇಂಗ್ಲಿಷ್</string>
+    <string name="feat_offline">ಸಂಪೂರ್ಣ ಆಫ್‌ಲೈನ್ ಕೆಲಸ ಮಾಡುತ್ತದೆ</string>
+    <string name="feat_companies">ಹಲವು ಕಂಪನಿಗಳನ್ನು ರಚಿಸಿ</string>
+    <string name="feat_companies_gold">5 ಕಂಪನಿಗಳು</string>
+    <string name="feat_companies_pro">ಅಸೀಮಿತ</string>
+    <string name="feat_bulk_whatsapp">ಒಟ್ಟಿಗೆ WhatsApp ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
+    <string name="feat_greetings">WhatsApp ನಲ್ಲಿ ಶುಭಾಶಯ ಮತ್ತು ಆಫರ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="feat_loyalty">ಲಾಯಲ್ಟಿ ಪಾಯಿಂಟ್‌ಗಳು</string>
+    <string name="feat_marketing">ಮಾರ್ಕೆಟಿಂಗ್ ಸಾಧನಗಳು</string>
+    <string name="feat_multi_currency">ಬಹು-ಕರೆನ್ಸಿ ಬೆಂಬಲ</string>
+    <string name="plans_current">ಈಗಿನ ಪ್ಲಾನ್: %1$s (%2$s)</string>
+    <string name="plans_days_left">%1$d ದಿನ ಉಳಿದಿದೆ · %2$s ವರೆಗೆ ಮಾನ್ಯ</string>
+    <string name="plans_current_button">ಈಗಿನ ಪ್ಲಾನ್</string>
+    <string name="plans_test_title">ಈ ಪ್ಲಾನ್ ಆನ್ ಮಾಡಬೇಕೇ?</string>
+    <string name="plans_test_message">ಆನ್‌ಲೈನ್ ಪಾವತಿ ಇನ್ನೂ ಸಿದ್ಧವಾಗಿಲ್ಲ. ಇದು ಹಣ ಪಡೆಯದೆ ಈ ಫೋನ್‌ನಲ್ಲಿ %1$s (%2$s) ಪ್ಲಾನ್ ಅನ್ನು 1 ವರ್ಷ ಆನ್ ಮಾಡುತ್ತದೆ.</string>
+    <string name="plans_activate">ಆನ್ ಮಾಡಿ</string>
+</resources>

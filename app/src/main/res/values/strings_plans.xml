@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="more_plans">Plans &amp; pricing</string>
+    <string name="plans_title">Plans &amp; pricing</string>
+    <string name="plans_one_year">1 Year</string>
+    <string name="plans_platform_mobile">Mobile</string>
+    <string name="plans_platform_both">Mobile + Desktop</string>
+    <string name="plans_desktop_note">The desktop app is coming soon. This plan includes it once it is released.</string>
+    <string name="plans_features_header">Features &amp; details</string>
+    <string name="plan_gold">Gold</string>
+    <string name="plan_retail_pro">Retail Pro</string>
+    <string name="plans_per_year">per year</string>
+    <string name="plans_get">Get %1$s</string>
+    <string name="plans_coming_soon">Coming soon</string>
+    <string name="feat_gst_billing">GST billing and A4 PDF invoices</string>
+    <string name="feat_reports">GSTR-1 and GSTR-3B style reports</string>
+    <string name="feat_udhaar">Udhaar ledger, statements and due reminders</string>
+    <string name="feat_payments_upi">Payments, UPI QR and WhatsApp sharing</string>
+    <string name="feat_books">Expenses, day, cash and bank books</string>
+    <string name="feat_quick_bill_scan">Quick bill and barcode scan</string>
+    <string name="feat_languages">Kannada, Hindi and English</string>
+    <string name="feat_offline">Works fully offline</string>
+    <string name="feat_companies">Create multiple companies</string>
+    <string name="feat_companies_gold">5 companies</string>
+    <string name="feat_companies_pro">Unlimited</string>
+    <string name="feat_bulk_whatsapp">Send bulk WhatsApp messages</string>
+    <string name="feat_greetings">Share greetings and offers on WhatsApp</string>
+    <string name="feat_loyalty">Loyalty points</string>
+    <string name="feat_marketing">Marketing tools</string>
+    <string name="feat_multi_currency">Multi-currency support</string>
+    <string name="plans_current">Current plan: %1$s (%2$s)</string>
+    <string name="plans_days_left">%1$d days left · valid till %2$s</string>
+    <string name="plans_current_button">Current plan</string>
+    <string name="plans_test_title">Switch on this plan?</string>
+    <string name="plans_test_message">Online payment is not ready yet. This turns on %1$s (%2$s) for 1 year on this phone, without charging you.</string>
+    <string name="plans_activate">Switch on</string>
+</resources>

@@ -30,6 +30,7 @@ import com.teczo.khatabill.ui.billing.InvoiceDetailScreen
 import com.teczo.khatabill.ui.billing.InvoiceListScreen
 import com.teczo.khatabill.ui.billing.NewInvoiceScreen
 import com.teczo.khatabill.ui.billing.QuickBillScreen
+import com.teczo.khatabill.ui.plans.PlansScreen
 import com.teczo.khatabill.ui.home.HomeScreen
 import com.teczo.khatabill.ui.home.PlaceholderScreen
 import com.teczo.khatabill.ui.language.LanguageOptions
@@ -56,6 +57,7 @@ import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Star
 import com.teczo.khatabill.ui.credit.ReminderScreen
 import com.teczo.khatabill.ui.more.MoreEntry
 import com.teczo.khatabill.ui.more.MoreViewModel
@@ -193,6 +195,7 @@ fun AppNavHost(
                     onOpen = { id -> navController.navigate(Routes.invoiceDetail(id)) },
                 )
             }
+            composable(Routes.PLANS) { PlansScreen(onBack = { navController.popBackStack() }) }
             composable(Routes.QUICK_BILL) {
                 QuickBillScreen(
                     onBack = { navController.popBackStack() },
@@ -244,6 +247,7 @@ fun AppNavHost(
                         MoreEntry(R.string.more_cash_book, Icons.Filled.DateRange) { navController.navigate(Routes.book("cash")) },
                         MoreEntry(R.string.more_bank_book, Icons.Filled.DateRange) { navController.navigate(Routes.book("bank")) },
                         MoreEntry(R.string.more_reports, Icons.AutoMirrored.Filled.List) { navController.navigate(Routes.REPORTS) },
+                        MoreEntry(R.string.more_plans, Icons.Filled.Star) { navController.navigate(Routes.PLANS) },
                     ),
                     currentLanguage = currentLanguage,
                     onLanguage = languageViewModel::select,
