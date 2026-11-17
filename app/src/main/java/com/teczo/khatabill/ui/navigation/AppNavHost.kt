@@ -23,6 +23,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AppBottomBar
 import com.teczo.khatabill.ui.billing.InvoiceDetailScreen
 import com.teczo.khatabill.ui.billing.InvoiceListScreen
 import com.teczo.khatabill.ui.billing.NewInvoiceScreen
@@ -36,7 +37,32 @@ import com.teczo.khatabill.ui.items.ItemEditScreen
 import com.teczo.khatabill.ui.items.ItemListScreen
 import com.teczo.khatabill.ui.items.NEW_ITEM_ID
 import com.teczo.khatabill.ui.onboarding.BusinessSetupScreen
+import com.teczo.khatabill.domain.model.DocumentType
+import com.teczo.khatabill.ui.billing.UpiQrScreen
+import com.teczo.khatabill.ui.books.BookViewModel
+import com.teczo.khatabill.ui.books.DayBookScreen
+import com.teczo.khatabill.ui.books.MoneyBookScreen
+import com.teczo.khatabill.ui.credit.CollectionsScreen
+import com.teczo.khatabill.ui.expenses.ExpenseEditScreen
+import com.teczo.khatabill.ui.expenses.ExpenseListScreen
+import com.teczo.khatabill.ui.reports.ReportHubScreen
+import com.teczo.khatabill.ui.reports.ReportKind
+import com.teczo.khatabill.ui.reports.ReportScreen
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.ShoppingCart
+import com.teczo.khatabill.ui.credit.ReminderScreen
+import com.teczo.khatabill.ui.more.MoreEntry
+import com.teczo.khatabill.ui.more.MoreViewModel
+import com.teczo.khatabill.ui.more.MoreScreen
+import com.teczo.khatabill.ui.more.moneyIcon
 import com.teczo.khatabill.ui.parties.NEW_ID
+import com.teczo.khatabill.ui.parties.PartyDetailScreen
+import com.teczo.khatabill.ui.payments.NO_PARTY
+import com.teczo.khatabill.ui.payments.PaymentListScreen
+import com.teczo.khatabill.ui.payments.RecordPaymentScreen
 import com.teczo.khatabill.ui.parties.PartyEditScreen
 import com.teczo.khatabill.ui.parties.PartyListScreen
 
@@ -67,22 +93,13 @@ fun AppNavHost(
     Scaffold(
         bottomBar = {
             if (route in bottomTabs.map { it.route }) {
-                NavigationBar {
-                    bottomTabs.forEach { tab ->
-                        NavigationBarItem(
-                            selected = route == tab.route,
-                            onClick = {
-                                navController.navigate(tab.route) {
-                                    popUpTo(navController.graph.findStartDestination().id) { saveState = true }
-                                    launchSingleTop = true
-                                    restoreState = true
-                                }
-                            },
-                            icon = { Icon(tab.icon, contentDescription = null) },
-                            label = { Text(stringResource(tab.label)) },
-                        )
+                AppBottomBar(selectedRoute = route, onSelect = { target ->
+                    navController.navigate(target) {
+                        popUpTo(navController.graph.findStartDestination().id) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
                     }
-                }
+                })
             }
         },
     ) { padding ->
@@ -94,7 +111,8 @@ fun AppNavHost(
             composable(Routes.LANGUAGE) {
                 LanguagePickerScreen(onSelect = { tag ->
                     languageViewModel.select(tag)
-                    navController.navigate(Routes.ONBOARDING) { popUpTo(Routes.LANGUAGE) { inclusive = true } }
+                    val next = if (startViewModel.hasBusiness.value) Routes.HOME else Routes.ONBOARDING
+                    navController.navigate(next) { popUpTo(Routes.LANGUAGE) { inclusive = true } }
                 })
             }
             composable(Routes.ONBOARDING) {
@@ -102,15 +120,68 @@ fun AppNavHost(
                     navController.navigate(Routes.HOME) { popUpTo(Routes.ONBOARDING) { inclusive = true } }
                 })
             }
-            composable(Routes.HOME) { HomeScreen() }
+            composable(Routes.HOME) {
+                HomeScreen(
+                    onCollections = { navController.navigate(Routes.COLLECTIONS) },
+                    onNewSale = { navController.navigate(Routes.invoiceNew(DocumentType.SALE.name)) },
+                    onAddPayment = { navController.navigate(Routes.paymentNew(NO_PARTY)) },
+                    onAddCustomer = { navController.navigate(Routes.partyEdit(NEW_ID)) },
+                    onOpenInvoice = { id -> navController.navigate(Routes.invoiceDetail(id)) },
+                )
+            }
             composable(Routes.PARTIES) {
                 PartyListScreen(
                     onAdd = { navController.navigate(Routes.partyEdit(NEW_ID)) },
-                    onOpen = { id -> navController.navigate(Routes.partyEdit(id)) },
+                    onOpen = { id -> navController.navigate(Routes.partyDetail(id)) },
+                )
+            }
+            composable(Routes.PARTY_DETAIL, arguments = listOf(navArgument("partyId") { type = NavType.StringType })) {
+                PartyDetailScreen(
+                    onBack = { navController.popBackStack() },
+                    onEdit = { id -> navController.navigate(Routes.partyEdit(id)) },
+                    onAddPayment = { id -> navController.navigate(Routes.paymentNew(id)) },
+                    onRemind = { id -> navController.navigate(Routes.reminder(id)) },
+                    onOpenInvoice = { id -> navController.navigate(Routes.invoiceDetail(id)) },
                 )
             }
             composable(Routes.PARTY_EDIT, arguments = listOf(navArgument("partyId") { type = NavType.StringType })) {
                 PartyEditScreen(onDone = { navController.popBackStack() })
+            }
+            composable(Routes.PAYMENT_NEW, arguments = listOf(navArgument("partyId") { type = NavType.StringType })) {
+                RecordPaymentScreen(onDone = { navController.popBackStack() })
+            }
+            composable(Routes.PAYMENTS) {
+                PaymentListScreen(
+                    onBack = { navController.popBackStack() },
+                    onAdd = { navController.navigate(Routes.paymentNew(NO_PARTY)) },
+                )
+            }
+            composable(Routes.COLLECTIONS) {
+                CollectionsScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenParty = { id -> navController.navigate(Routes.partyDetail(id)) },
+                    onRemind = { id -> navController.navigate(Routes.reminder(id)) },
+                )
+            }
+            composable(Routes.REMINDER, arguments = listOf(navArgument("partyId") { type = NavType.StringType })) {
+                ReminderScreen(onBack = { navController.popBackStack() })
+            }
+            composable(Routes.EXPENSES) {
+                ExpenseListScreen(onBack = { navController.popBackStack() }, onAdd = { navController.navigate(Routes.EXPENSE_NEW) })
+            }
+            composable(Routes.EXPENSE_NEW) { ExpenseEditScreen(onDone = { navController.popBackStack() }) }
+            composable(Routes.REPORTS) {
+                ReportHubScreen(onBack = { navController.popBackStack() }, onOpen = { kind -> navController.navigate(Routes.report(kind.name)) })
+            }
+            composable(Routes.REPORT, arguments = listOf(navArgument("kind") { type = NavType.StringType })) {
+                ReportScreen(onBack = { navController.popBackStack() })
+            }
+            composable(Routes.BOOK, arguments = listOf(navArgument("book") { type = NavType.StringType })) { entry ->
+                if (entry.arguments?.getString("book") == "day") DayBookScreen(onBack = { navController.popBackStack() })
+                else MoneyBookScreen(onBack = { navController.popBackStack() })
+            }
+            composable(Routes.UPI_QR, arguments = listOf(navArgument("invoiceId") { type = NavType.StringType })) {
+                UpiQrScreen(onBack = { navController.popBackStack() })
             }
             composable(Routes.BILLING) {
                 InvoiceListScreen(
@@ -127,7 +198,10 @@ fun AppNavHost(
                 )
             }
             composable(Routes.INVOICE_DETAIL, arguments = listOf(navArgument("invoiceId") { type = NavType.StringType })) {
-                InvoiceDetailScreen(onBack = { navController.popBackStack() })
+                InvoiceDetailScreen(
+                    onBack = { navController.popBackStack() },
+                    onShowQr = { id -> navController.navigate(Routes.upiQr(id)) },
+                )
             }
             composable(Routes.ITEMS) {
                 ItemListScreen(
@@ -145,10 +219,23 @@ fun AppNavHost(
                 )
             }
             composable(Routes.MORE) {
-                PlaceholderScreen(R.string.nav_more) {
-                    Text(stringResource(R.string.language_section))
-                    LanguageOptions(current = currentLanguage, onSelect = languageViewModel::select)
-                }
+                val moreViewModel: MoreViewModel = hiltViewModel()
+                val remindersEnabled by moreViewModel.remindersEnabled.collectAsStateWithLifecycle()
+                MoreScreen(
+                    remindersEnabled = remindersEnabled,
+                    onRemindersChange = moreViewModel::setRemindersEnabled,
+                    entries = listOf(
+                        MoreEntry(R.string.more_payments, moneyIcon) { navController.navigate(Routes.PAYMENTS) },
+                        MoreEntry(R.string.more_collections, Icons.Filled.Notifications) { navController.navigate(Routes.COLLECTIONS) },
+                        MoreEntry(R.string.more_expenses, Icons.Filled.ShoppingCart) { navController.navigate(Routes.EXPENSES) },
+                        MoreEntry(R.string.more_day_book, Icons.Filled.DateRange) { navController.navigate(Routes.book("day")) },
+                        MoreEntry(R.string.more_cash_book, Icons.Filled.DateRange) { navController.navigate(Routes.book("cash")) },
+                        MoreEntry(R.string.more_bank_book, Icons.Filled.DateRange) { navController.navigate(Routes.book("bank")) },
+                        MoreEntry(R.string.more_reports, Icons.AutoMirrored.Filled.List) { navController.navigate(Routes.REPORTS) },
+                    ),
+                    currentLanguage = currentLanguage,
+                    onLanguage = languageViewModel::select,
+                )
             }
         }
     }

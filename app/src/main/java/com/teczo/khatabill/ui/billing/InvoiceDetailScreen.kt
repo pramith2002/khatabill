@@ -33,16 +33,23 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
+import com.teczo.khatabill.domain.model.DocumentType
 import com.teczo.khatabill.domain.model.InvoiceStatus
 import com.teczo.khatabill.ui.components.AppTextField
+import com.teczo.khatabill.ui.components.PeachCard
 import com.teczo.khatabill.ui.components.ScreenHeader
 import com.teczo.khatabill.ui.util.Labels
 import com.teczo.khatabill.ui.util.unitLabel
 import com.teczo.khatabill.util.dates.DateFormat
 import com.teczo.khatabill.util.money.MoneyFormatter
 import com.teczo.khatabill.util.money.MoneyInput
+import com.teczo.khatabill.util.pdf.InvoicePdfBuilder
 import com.teczo.khatabill.util.pdf.PdfShare
+import com.teczo.khatabill.util.share.WhatsAppShare
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @Composable
 private fun rupees(paise: Long) = stringResource(R.string.amount_rupees, MoneyFormatter.format(paise))
@@ -56,10 +63,12 @@ private fun AmountRow(label: String, value: String, bold: Boolean = false) {
 }
 
 @Composable
-fun InvoiceDetailScreen(onBack: () -> Unit, viewModel: InvoiceDetailViewModel = hiltViewModel()) {
+fun InvoiceDetailScreen(onBack: () -> Unit, onShowQr: (String) -> Unit, viewModel: InvoiceDetailViewModel = hiltViewModel()) {
     val data by viewModel.data.collectAsStateWithLifecycle()
     val business by viewModel.business.collectAsStateWithLifecycle()
+    val party by viewModel.party.collectAsStateWithLifecycle()
     val context = LocalContext.current
+    val resources = androidx.compose.ui.platform.LocalResources.current
     val scope = rememberCoroutineScope()
     var showCancel by remember { mutableStateOf(false) }
 
@@ -99,8 +108,8 @@ fun InvoiceDetailScreen(onBack: () -> Unit, viewModel: InvoiceDetailViewModel = 
                 }
             }
 
-            ElevatedCard(Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp)) {
+            PeachCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(4.dp)) {
                     AmountRow(stringResource(R.string.total_subtotal), rupees(inv.subtotal))
                     if (inv.discountTotal > 0) AmountRow(stringResource(R.string.total_discount), "- " + rupees(inv.discountTotal))
                     AmountRow(stringResource(R.string.total_taxable), rupees(inv.taxableTotal))
@@ -117,6 +126,28 @@ fun InvoiceDetailScreen(onBack: () -> Unit, viewModel: InvoiceDetailViewModel = 
                     }
                 }
             }
+            val whatsappFailed = stringResource(R.string.invoice_pdf_failed)
+            OutlinedButton(
+                onClick = {
+                    val biz = business ?: return@OutlinedButton
+                    scope.launch {
+                        try {
+                            val lines = current.lines.sortedBy { it.lineNo }
+                            val file = withContext(Dispatchers.IO) { InvoicePdfBuilder(context).build(biz, inv, lines) }
+                            val message = resources.getString(R.string.invoice_message, inv.number, "₹" + MoneyFormatter.format(inv.grandTotal), biz.name)
+                            WhatsAppShare.send(context, party?.whatsapp ?: party?.phone, message, file)
+                        } catch (e: Exception) {
+                            Toast.makeText(context, whatsappFailed, Toast.LENGTH_LONG).show()
+                        }
+                    }
+                },
+                modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp),
+            ) { Text(stringResource(R.string.invoice_whatsapp)) }
+            if (inv.type == DocumentType.SALE && inv.status != InvoiceStatus.CANCELLED && inv.grandTotal > inv.paidAmount) {
+                OutlinedButton(onClick = { onShowQr(inv.id) }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) {
+                    Text(stringResource(R.string.invoice_show_qr))
+                }
+            }
         }
         val failed = stringResource(R.string.invoice_pdf_failed)
         Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -125,9 +156,9 @@ fun InvoiceDetailScreen(onBack: () -> Unit, viewModel: InvoiceDetailViewModel = 
                     Text(stringResource(R.string.invoice_cancel))
                 }
             }
-            Button(
+            AccentButton(
                 onClick = {
-                    val biz = business ?: return@Button
+                    val biz = business ?: return@AccentButton
                     scope.launch {
                         try {
                             PdfShare.share(context, biz, current.invoice, current.lines.sortedBy { it.lineNo })

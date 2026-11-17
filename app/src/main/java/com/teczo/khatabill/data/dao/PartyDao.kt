@@ -14,6 +14,9 @@ interface PartyDao {
     @Query("SELECT * FROM party WHERE id = :id AND deletedAt IS NULL")
     suspend fun getById(id: String): PartyEntity?
 
+    @Query("SELECT * FROM party WHERE id = :id AND deletedAt IS NULL")
+    fun observeById(id: String): Flow<PartyEntity?>
+
     /** Search matches the English name, the Kannada name and the phone number. Empty query lists all. */
     @Query(
         """

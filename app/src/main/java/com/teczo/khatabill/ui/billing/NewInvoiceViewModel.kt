@@ -12,6 +12,7 @@ import com.teczo.khatabill.data.repositories.InvoiceDraft
 import com.teczo.khatabill.data.repositories.InvoiceLineDraft
 import com.teczo.khatabill.data.repositories.InvoiceRepository
 import com.teczo.khatabill.data.repositories.ItemRepository
+import com.teczo.khatabill.data.repositories.LedgerRepository
 import com.teczo.khatabill.data.repositories.PartyRepository
 import com.teczo.khatabill.domain.invoice.InvoiceNumber
 import com.teczo.khatabill.domain.model.DocumentType
@@ -36,6 +37,9 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 import javax.inject.Inject
 
+/** The party's credit limit and what their balance would be after this bill (both paise). */
+data class CreditWarning(val limit: Long, val balanceAfter: Long)
+
 @OptIn(ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class NewInvoiceViewModel @Inject constructor(
@@ -44,6 +48,7 @@ class NewInvoiceViewModel @Inject constructor(
     partyRepository: PartyRepository,
     itemRepository: ItemRepository,
     private val invoiceRepository: InvoiceRepository,
+    ledger: LedgerRepository,
 ) : ViewModel() {
     private val type: DocumentType = DocumentType.valueOf(savedState["type"] ?: DocumentType.SALE.name)
 
@@ -70,6 +75,21 @@ class NewInvoiceViewModel @Inject constructor(
     val items: StateFlow<List<ItemEntity>> = businessRepository.active
         .flatMapLatest { itemRepository.observe(it.id) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    /** Shown when this bill would take the party past their credit limit (warn only; the bill can still be saved). */
+    val creditWarning: StateFlow<CreditWarning?> = businessRepository.active.flatMapLatest { b ->
+        combine(_form, calc, ledger.observeBalances(b.id)) { f, c, balances ->
+            val party = f.party
+            val limit = party?.creditLimit
+            if (type != DocumentType.SALE || party == null || limit == null || c !is CalcState.Ok) {
+                null
+            } else {
+                val paid = MoneyInput.parsePaise(f.paid) ?: 0L
+                val after = (balances.byParty[party.id] ?: 0L) + c.result.grandTotal - paid
+                if (after > limit) CreditWarning(limit, after) else null
+            }
+        }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     private val _error = MutableStateFlow<Int?>(null)
     val error: StateFlow<Int?> = _error.asStateFlow()
@@ -152,7 +172,7 @@ class NewInvoiceViewModel @Inject constructor(
             prefix = biz.invoicePrefix,
             financialYearStartMonth = biz.financialYearStartMonth,
             date = f.date,
-            dueDate = null,
+            dueDate = f.dueDate.takeIf { type == DocumentType.SALE },
             partyId = f.party?.id,
             partyName = f.party?.name,
             partyGstin = f.party?.gstin,
@@ -169,6 +189,7 @@ class NewInvoiceViewModel @Inject constructor(
             roundOff = r.roundOff,
             grandTotal = r.grandTotal,
             paidAmount = paid,
+            paymentMode = f.paymentMode,
             notes = f.notes.trim().ifBlank { null },
             terms = null,
             transportDetails = null,

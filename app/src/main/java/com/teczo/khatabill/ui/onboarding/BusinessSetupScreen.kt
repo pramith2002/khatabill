@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
 
 @Composable
 fun BusinessSetupScreen(onFinished: () -> Unit, viewModel: BusinessSetupViewModel = hiltViewModel()) {
@@ -68,7 +69,7 @@ fun BusinessSetupScreen(onFinished: () -> Unit, viewModel: BusinessSetupViewMode
                     Text(stringResource(R.string.btn_back))
                 }
             }
-            Button(onClick = viewModel::next, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
+            AccentButton(onClick = viewModel::next, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
                 Text(stringResource(if (step < SETUP_STEPS - 1) R.string.btn_next else R.string.btn_finish))
             }
         }

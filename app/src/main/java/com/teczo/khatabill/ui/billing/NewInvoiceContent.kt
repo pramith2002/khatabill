@@ -39,6 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
 import com.teczo.khatabill.data.entities.BusinessEntity
 import com.teczo.khatabill.data.entities.ItemEntity
 import com.teczo.khatabill.data.entities.PartyEntity
@@ -47,7 +48,11 @@ import com.teczo.khatabill.domain.model.DocumentType
 import com.teczo.khatabill.domain.model.GstScheme
 import com.teczo.khatabill.ui.components.AppTextField
 import com.teczo.khatabill.ui.components.Choice
+import androidx.compose.foundation.layout.FlowRow
+import com.teczo.khatabill.domain.model.PaymentMode
 import com.teczo.khatabill.ui.components.ChoiceSheet
+import com.teczo.khatabill.ui.components.DateField
+import com.teczo.khatabill.ui.components.PeachCard
 import com.teczo.khatabill.ui.components.PickerField
 import com.teczo.khatabill.ui.components.ScreenHeader
 import com.teczo.khatabill.ui.util.Labels
@@ -71,7 +76,7 @@ class NewInvoiceActions(
 private fun rupees(paise: Long) = stringResource(R.string.amount_rupees, MoneyFormatter.format(paise))
 
 /** The whole New bill screen, driven only by the values passed in (so it can be tested without Hilt). */
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 fun NewInvoiceContent(
     form: InvoiceFormState,
@@ -81,6 +86,7 @@ fun NewInvoiceContent(
     items: List<ItemEntity>,
     error: Int?,
     actions: NewInvoiceActions,
+    creditWarning: CreditWarning? = null,
 ) {
     var showParty by remember { mutableStateOf(false) }
     var showItems by remember { mutableStateOf(false) }
@@ -101,6 +107,12 @@ fun NewInvoiceContent(
                 { showParty = true },
             )
             PickerField(stringResource(R.string.field_date), DateFormat.format(form.date), { showDate = true })
+            if (isSale) {
+                DateField(
+                    stringResource(R.string.field_due_date), form.dueDate,
+                    { d -> actions.onUpdate { it.copy(dueDate = d) } }, clearable = true,
+                )
+            }
             if (business?.gstScheme == GstScheme.REGULAR) {
                 PickerField(
                     stringResource(if (form.type == DocumentType.PURCHASE) R.string.field_supplier_state else R.string.field_place_of_supply),
@@ -143,10 +155,30 @@ fun NewInvoiceContent(
                         keyboardType = KeyboardType.Decimal,
                         error = if (form.paid.isNotBlank() && MoneyInput.parsePaise(form.paid) == null) R.string.err_number else null,
                     )
+                    if (form.paid.isNotBlank()) {
+                        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            PaymentMode.entries.forEach { m ->
+                                FilterChip(
+                                    selected = form.paymentMode == m,
+                                    onClick = { actions.onUpdate { it.copy(paymentMode = m) } },
+                                    label = { Text(stringResource(Labels.paymentMode(m)), style = MaterialTheme.typography.labelLarge) },
+                                    modifier = Modifier.heightIn(min = 48.dp),
+                                )
+                            }
+                        }
+                    }
                 }
                 AppTextField(form.notes, { v -> actions.onUpdate { it.copy(notes = v) } }, stringResource(R.string.field_invoice_notes), singleLine = false)
             }
 
+            if (creditWarning != null) {
+                PeachCard(Modifier.fillMaxWidth()) {
+                    Text(
+                        stringResource(R.string.credit_limit_warning, rupees(creditWarning.limit), rupees(creditWarning.balanceAfter)),
+                        color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
+            }
             if (calc is CalcState.Ok) TotalsCard(calc.result, form.paid.takeIf { isSale }?.let { MoneyInput.parsePaise(it) } ?: 0L)
             val message = when {
                 error != null -> error
@@ -155,7 +187,7 @@ fun NewInvoiceContent(
             }
             if (message != null) Text(stringResource(message), color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium)
         }
-        Button(
+        AccentButton(
             onClick = actions.onSave,
             enabled = calc is CalcState.Ok,
             modifier = Modifier.fillMaxWidth().padding(16.dp).heightIn(min = 56.dp),
@@ -273,8 +305,8 @@ private fun TotalRow(label: String, value: String, bold: Boolean = false) {
 /** Totals as they will be saved. CGST/SGST/IGST rows appear only when there is tax. */
 @Composable
 fun TotalsCard(r: GstInvoiceResult, received: Long) {
-    ElevatedCard(Modifier.fillMaxWidth()) {
-        Column(Modifier.padding(16.dp)) {
+    PeachCard(Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(4.dp)) {
             TotalRow(stringResource(R.string.total_subtotal), rupees(r.subtotal))
             if (r.discountTotal > 0) TotalRow(stringResource(R.string.total_discount), "- " + rupees(r.discountTotal))
             TotalRow(stringResource(R.string.total_taxable), rupees(r.taxableTotal))

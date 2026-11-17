@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Table columns -->
+    <string name="col_date">ದಿನಾಂಕ</string>
+    <string name="col_number">ಬಿಲ್ ಸಂ.</string>
+    <string name="col_party">ವ್ಯಕ್ತಿ</string>
+    <string name="col_gstin">GSTIN</string>
+    <string name="col_taxable">ತೆರಿಗೆ ಮೊತ್ತ</string>
+    <string name="col_cgst">CGST</string>
+    <string name="col_sgst">SGST</string>
+    <string name="col_igst">IGST</string>
+    <string name="col_tax">ತೆರಿಗೆ</string>
+    <string name="col_total">ಒಟ್ಟು</string>
+    <string name="col_item">ಸರಕು</string>
+    <string name="col_hsn">HSN</string>
+    <string name="col_qty">ಪ್ರಮಾಣ</string>
+    <string name="col_unit">ಘಟಕ</string>
+    <string name="col_rate">ದರ</string>
+    <string name="col_stock">ದಾಸ್ತಾನು</string>
+    <string name="col_value">ಮೌಲ್ಯ</string>
+    <string name="col_category">ವರ್ಗ</string>
+    <string name="col_amount">ಮೊತ್ತ</string>
+    <string name="col_count">ಬಿಲ್‌ಗಳು</string>
+    <string name="col_details">ವಿವರ</string>
+    <string name="col_in">ಬಂದ ಹಣ</string>
+    <string name="col_out">ಹೋದ ಹಣ</string>
+    <string name="col_balance">ಬಾಕಿ</string>
+    <string name="col_mode">ವಿಧಾನ</string>
+    <string name="col_place">ರಾಜ್ಯ</string>
+    <string name="col_gst_rate">GST %</string>
+    <string name="col_min_stock">ಕನಿಷ್ಠ ದಾಸ್ತಾನು</string>
+
+    <!-- Report names and tables -->
+    <string name="more_reports">ವರದಿಗಳು</string>
+    <string name="reports_hint">ವರದಿ ಆರಿಸಿ, ನಂತರ ದಿನಾಂಕ ಆರಿಸಿ</string>
+    <string name="report_sales">ಮಾರಾಟ ವರದಿ</string>
+    <string name="report_purchases">ಖರೀದಿ ವರದಿ</string>
+    <string name="report_item_wise">ಸರಕು ಪ್ರಕಾರ ಮಾರಾಟ</string>
+    <string name="report_party_wise">ವ್ಯಕ್ತಿ ಪ್ರಕಾರ ಮಾರಾಟ</string>
+    <string name="report_pl">ಲಾಭ ಮತ್ತು ನಷ್ಟ</string>
+    <string name="report_stock">ದಾಸ್ತಾನು ಸಾರಾಂಶ</string>
+    <string name="report_low_stock">ಕಡಿಮೆ ದಾಸ್ತಾನು</string>
+    <string name="report_expenses">ಖರ್ಚು ವರದಿ</string>
+    <string name="report_gstr1">GST ಮಾರಾಟ ಸಾರಾಂಶ (GSTR-1 ಮಾದರಿ)</string>
+    <string name="report_gstr3b">GST ತೆರಿಗೆ ಸಾರಾಂಶ (GSTR-3B ಮಾದರಿ)</string>
+    <string name="tbl_b2b">B2B ಮಾರಾಟ (GSTIN ಸಹಿತ)</string>
+    <string name="tbl_b2c">B2C ಮಾರಾಟ (GSTIN ಇಲ್ಲದೆ)</string>
+    <string name="tbl_hsn">HSN ಸಾರಾಂಶ</string>
+    <string name="tbl_3b">ತೆರಿಗೆ ಸಾರಾಂಶ</string>
+    <string name="pl_sales">ಮಾರಾಟ (ತೆರಿಗೆ ಮೊತ್ತ)</string>
+    <string name="pl_sales_returns">ಮಾರಾಟ ಹಿಂತಿರುಗಿಸಿದ್ದು</string>
+    <string name="pl_purchases">ಖರೀದಿ (ತೆರಿಗೆ ಮೊತ್ತ)</string>
+    <string name="pl_purchase_returns">ಖರೀದಿ ಹಿಂತಿರುಗಿಸಿದ್ದು</string>
+    <string name="pl_expenses">ಖರ್ಚುಗಳು</string>
+    <string name="pl_profit">ಲಾಭ</string>
+    <string name="gst_outward">ಮಾರಾಟದ ಮೇಲೆ ಸಂಗ್ರಹಿಸಿದ ತೆರಿಗೆ</string>
+    <string name="gst_inward">ಖರೀದಿಯ ಮೇಲೆ ಪಾವತಿಸಿದ ತೆರಿಗೆ</string>
+    <string name="gst_net">ಪಾವತಿಸಬೇಕಾದ ನಿವ್ವಳ ತೆರಿಗೆ</string>
+    <string name="report_empty">ಈ ಅವಧಿಯಲ್ಲಿ ಮಾಹಿತಿ ಇಲ್ಲ</string>
+    <string name="report_gst_note">ನಿಮ್ಮ ಲೆಕ್ಕಿಗರಿಗಾಗಿ ಸಾರಾಂಶ. ಸಲ್ಲಿಸುವ ಮೊದಲು CA ಬಳಿ ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="export_csv">CSV ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="export_pdf">PDF ಹಂಚಿಕೊಳ್ಳಿ</string>
+
+    <!-- Date ranges -->
+    <string name="range_today">ಇಂದು</string>
+    <string name="range_week">ಈ ವಾರ</string>
+    <string name="range_month">ಈ ತಿಂಗಳು</string>
+    <string name="range_quarter">ಈ ತ್ರೈಮಾಸಿಕ</string>
+    <string name="range_fy">ಈ ಹಣಕಾಸು ವರ್ಷ</string>
+    <string name="range_custom">ದಿನಾಂಕ ಆರಿಸಿ</string>
+    <string name="range_from">ಇಂದ</string>
+    <string name="range_to">ವರೆಗೆ</string>
+
+    <!-- Books -->
+    <string name="more_day_book">ದಿನಚರಿ ಪುಸ್ತಕ</string>
+    <string name="more_cash_book">ನಗದು ಪುಸ್ತಕ</string>
+    <string name="more_bank_book">ಬ್ಯಾಂಕ್ ಪುಸ್ತಕ</string>
+    <string name="book_in">ಬಂದ ಹಣ</string>
+    <string name="book_out">ಹೋದ ಹಣ</string>
+    <string name="daybook_empty">ಈ ದಿನ ಏನೂ ದಾಖಲಾಗಿಲ್ಲ</string>
+    <string name="daybook_sale_return">ಮಾರಾಟ ಹಿಂತಿರುಗಿಸಿದ್ದು</string>
+    <string name="daybook_purchase_return">ಖರೀದಿ ಹಿಂತಿರುಗಿಸಿದ್ದು</string>
+    <string name="daybook_expense">ಖರ್ಚು</string>
+
+    <!-- Expenses -->
+    <string name="more_expenses">ಖರ್ಚುಗಳು</string>
+    <string name="expenses_empty">ಇನ್ನೂ ಖರ್ಚುಗಳಿಲ್ಲ</string>
+    <string name="expenses_hint">ಬಾಡಿಗೆ, ಸಂಬಳ, ಸಾಗಣೆ ಇತ್ಯಾದಿ ದಾಖಲಿಸಲು “ಖರ್ಚು ಸೇರಿಸಿ” ಒತ್ತಿ</string>
+    <string name="expense_add">ಖರ್ಚು ಸೇರಿಸಿ</string>
+    <string name="expense_title_new">ಹೊಸ ಖರ್ಚು</string>
+    <string name="exp_rent">ಬಾಡಿಗೆ</string>
+    <string name="exp_salary">ಸಂಬಳ</string>
+    <string name="exp_electricity">ವಿದ್ಯುತ್</string>
+    <string name="exp_transport">ಸಾಗಣೆ</string>
+    <string name="exp_raw_material">ಕಚ್ಚಾ ವಸ್ತು</string>
+    <string name="exp_repair">ದುರಸ್ತಿ</string>
+    <string name="exp_food">ಚಹಾ ಮತ್ತು ಊಟ</string>
+    <string name="exp_packing">ಪ್ಯಾಕಿಂಗ್</string>
+    <string name="exp_other">ಇತರೆ</string>
+    <string name="expense_receipt_add">ರಸೀದಿ ಫೋಟೋ ಸೇರಿಸಿ</string>
+    <string name="expense_receipt_attached">ರಸೀದಿ ಫೋಟೋ ಸೇರಿಸಲಾಗಿದೆ</string>
+    <string name="expense_delete_title">ಈ ಖರ್ಚನ್ನು ಅಳಿಸಬೇಕೇ?</string>
+    <string name="expense_delete_message">ಇದು ಪುಸ್ತಕಗಳು ಮತ್ತು ವರದಿಗಳಿಂದ ತೆಗೆಯಲ್ಪಡುತ್ತದೆ.</string>
+
+    <!-- Dashboard -->
+    <string name="dash_today">ಇಂದು</string>
+    <string name="dash_sales">ಮಾರಾಟ</string>
+    <string name="dash_collected">ವಸೂಲಾದದ್ದು</string>
+    <string name="dash_month_sales">ಈ ತಿಂಗಳ ಮಾರಾಟ</string>
+    <string name="dash_top_items">ಈ ತಿಂಗಳ ಪ್ರಮುಖ ಸರಕುಗಳು</string>
+    <string name="dash_top_customers">ಈ ತಿಂಗಳ ಪ್ರಮುಖ ಗ್ರಾಹಕರು</string>
+    <string name="dash_recent">ಇತ್ತೀಚಿನ ಬಿಲ್‌ಗಳು</string>
+    <string name="dash_none">ಇನ್ನೂ ಏನೂ ಇಲ್ಲ</string>
+</resources>

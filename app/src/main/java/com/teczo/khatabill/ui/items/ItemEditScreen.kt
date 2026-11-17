@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
 import com.teczo.khatabill.domain.model.GstRates
 import com.teczo.khatabill.domain.model.ItemType
 import com.teczo.khatabill.ui.components.AppTextField
@@ -124,7 +125,7 @@ fun ItemEditScreen(onDone: () -> Unit, viewModel: ItemEditViewModel = hiltViewMo
         }
         Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             OutlinedButton(onClick = onDone, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) { Text(stringResource(R.string.btn_cancel)) }
-            Button(onClick = viewModel::save, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) { Text(stringResource(R.string.btn_save)) }
+            AccentButton(onClick = viewModel::save, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) { Text(stringResource(R.string.btn_save)) }
         }
     }
 
@@ -157,7 +158,7 @@ fun ItemEditScreen(onDone: () -> Unit, viewModel: ItemEditViewModel = hiltViewMo
             footer = {
                 Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                     AppTextField(newName, { newName = it }, stringResource(R.string.category_new_hint), modifier = Modifier.weight(1f))
-                    Button(
+                    AccentButton(
                         onClick = { viewModel.addCategory(newName); newName = ""; showCategory = false },
                         modifier = Modifier.heightIn(min = 56.dp),
                     ) { Text(stringResource(R.string.btn_add)) }

@@ -16,6 +16,8 @@ class PartyRepository @Inject constructor(
 
     suspend fun get(id: String): PartyEntity? = dao.getById(id)
 
+    fun observeById(id: String): Flow<PartyEntity?> = dao.observeById(id)
+
     suspend fun save(party: PartyEntity) {
         dao.upsert(party.copy(updatedAt = System.currentTimeMillis(), syncState = SyncState.PENDING))
     }

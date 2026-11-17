@@ -8,6 +8,7 @@ import com.teczo.khatabill.domain.model.BusinessType
 import com.teczo.khatabill.domain.model.DocumentType
 import com.teczo.khatabill.domain.model.GstScheme
 import com.teczo.khatabill.domain.model.InvoiceStatus
+import com.teczo.khatabill.domain.model.PaymentMode
 
 /** Maps stored codes (units, GST state codes, enums) to localized string resources. */
 object Labels {
@@ -69,6 +70,14 @@ object Labels {
         InvoiceStatus.PARTIAL -> R.string.status_partial
         InvoiceStatus.PAID -> R.string.status_paid
         InvoiceStatus.CANCELLED -> R.string.status_cancelled
+    }
+
+    @StringRes fun paymentMode(mode: PaymentMode): Int = when (mode) {
+        PaymentMode.CASH -> R.string.mode_cash
+        PaymentMode.UPI -> R.string.mode_upi
+        PaymentMode.CARD -> R.string.mode_card
+        PaymentMode.BANK -> R.string.mode_bank
+        PaymentMode.CHEQUE -> R.string.mode_cheque
     }
 
     @StringRes fun gstScheme(scheme: GstScheme): Int = when (scheme) {

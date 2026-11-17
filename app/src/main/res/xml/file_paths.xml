@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Only generated invoice PDFs are shareable, nothing else in the cache. -->
+<!-- Only generated PDFs/CSVs and expense receipt photos are shareable, nothing else. -->
 <paths>
     <cache-path name="invoices" path="invoices/" />
+    <files-path name="receipts" path="receipts/" />
 </paths>

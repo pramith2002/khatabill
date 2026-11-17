@@ -21,3 +21,11 @@ enum class DocumentType {
 enum class InvoiceStatus { DRAFT, UNPAID, PARTIAL, PAID, CANCELLED }
 
 enum class StockReason { SALE, PURCHASE, RETURN, ADJUSTMENT, OPENING }
+
+enum class PaymentType { RECEIVED, PAID }
+
+enum class PaymentMode { CASH, UPI, CARD, BANK, CHEQUE }
+
+enum class ReminderChannel { NOTIFICATION, WHATSAPP, SMS }
+
+enum class ReminderStatus { PENDING, SENT, DONE }

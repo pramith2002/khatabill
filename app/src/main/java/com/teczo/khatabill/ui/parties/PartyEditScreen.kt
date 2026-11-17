@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
 import com.teczo.khatabill.domain.model.BalanceType
 import com.teczo.khatabill.domain.model.PartyType
 import com.teczo.khatabill.ui.components.AppTextField
@@ -110,7 +111,7 @@ fun PartyEditScreen(onDone: () -> Unit, viewModel: PartyEditViewModel = hiltView
                     Text(stringResource(R.string.btn_delete))
                 }
             }
-            Button(onClick = viewModel::save, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
+            AccentButton(onClick = viewModel::save, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
                 Text(stringResource(R.string.btn_save))
             }
         }

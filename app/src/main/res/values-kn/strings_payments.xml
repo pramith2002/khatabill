@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Record payment -->
+    <string name="payment_title_new">ಪಾವತಿ ದಾಖಲಿಸಿ</string>
+    <string name="payment_received">ಹಣ ಪಡೆದದ್ದು</string>
+    <string name="payment_paid">ಹಣ ಪಾವತಿಸಿದ್ದು</string>
+    <string name="field_amount">ಮೊತ್ತ (₹)</string>
+    <string name="field_payment_mode">ಪಾವತಿ ವಿಧಾನ</string>
+    <string name="mode_cash">ನಗದು</string>
+    <string name="mode_upi">UPI</string>
+    <string name="mode_card">ಕಾರ್ಡ್</string>
+    <string name="mode_bank">ಬ್ಯಾಂಕ್</string>
+    <string name="mode_cheque">ಚೆಕ್</string>
+    <string name="field_reference">ಉಲ್ಲೇಖ ಅಥವಾ UTR (ಐಚ್ಛಿಕ)</string>
+    <string name="field_against_invoice">ಬಿಲ್ ವಿರುದ್ಧ (ಐಚ್ಛಿಕ)</string>
+    <string name="against_oldest">ಹಳೆಯ ಬಿಲ್‌ಗಳಿಂದ ಮೊದಲು</string>
+    <string name="btn_save_payment">ಪಾವತಿ ಉಳಿಸಿ</string>
+    <string name="balance_outstanding">ಬಾಕಿ: %1$s</string>
+    <string name="err_choose_party">ಮೊದಲು ವ್ಯಕ್ತಿಯನ್ನು ಆರಿಸಿ</string>
+    <string name="err_amount">ಸೊನ್ನೆಗಿಂತ ಹೆಚ್ಚಿನ ಮೊತ್ತ ನಮೂದಿಸಿ</string>
+
+    <!-- Payment list -->
+    <string name="more_payments">ಪಾವತಿಗಳು</string>
+    <string name="payments_empty">ಇನ್ನೂ ಪಾವತಿಗಳಿಲ್ಲ</string>
+    <string name="payments_empty_hint">ಮೊದಲ ಪಾವತಿಯನ್ನು ವ್ಯಕ್ತಿಯ ಪುಟದಿಂದ ಅಥವಾ ಮುಖಪುಟದಿಂದ ದಾಖಲಿಸಿ</string>
+    <string name="payments_by_mode">ಪಾವತಿ ವಿಧಾನದ ಪ್ರಕಾರ</string>
+    <string name="payment_delete_title">ಈ ಪಾವತಿಯನ್ನು ಅಳಿಸಬೇಕೇ?</string>
+    <string name="payment_delete_message">ಇದರಿಂದ ಪಾವತಿಯಾದ ಬಿಲ್‌ಗಳು ಮತ್ತೆ ಬಾಕಿಯಾಗುತ್ತವೆ.</string>
+    <string name="payment_on_account">ಖಾತೆಗೆ ಜಮೆ: %1$s</string>
+    <string name="payment_walk_in">ಸಾಮಾನ್ಯ ಗ್ರಾಹಕ</string>
+
+    <!-- Party list and detail -->
+    <string name="filter_all">ಎಲ್ಲಾ</string>
+    <string name="filter_to_collect">ವಸೂಲಿ ಬರಬೇಕು</string>
+    <string name="filter_to_pay">ಪಾವತಿಸಬೇಕು</string>
+    <string name="filter_overdue">ಮೀರಿದ</string>
+    <string name="party_balance_to_collect">ವಸೂಲಿ ಬರಬೇಕು</string>
+    <string name="party_balance_to_pay">ಪಾವತಿಸಬೇಕು</string>
+    <string name="party_balance_settled">ಎಲ್ಲಾ ಚುಕ್ತಾ</string>
+    <string name="party_add_payment">ಪಾವತಿ ಸೇರಿಸಿ</string>
+    <string name="party_statement">ಸ್ಟೇಟ್‌ಮೆಂಟ್ PDF</string>
+    <string name="party_remind">ನೆನಪಿಸಿ</string>
+    <string name="party_section_bills">ಬಿಲ್‌ಗಳು</string>
+    <string name="party_section_payments">ಪಾವತಿಗಳು</string>
+    <string name="party_no_bills">ಇನ್ನೂ ಬಿಲ್‌ಗಳಿಲ್ಲ</string>
+    <string name="party_no_payments">ಇನ್ನೂ ಪಾವತಿಗಳಿಲ್ಲ</string>
+    <string name="credit_limit_warning">%1$s ಸಾಲದ ಮಿತಿ ಮೀರುತ್ತದೆ (ಈ ಬಿಲ್ ನಂತರ ಬಾಕಿ: %2$s)</string>
+
+    <!-- UPI -->
+    <string name="upi_scan_title">ಪಾವತಿಸಲು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
+    <string name="upi_pay_with_app">ಯಾವುದೇ UPI ಆ್ಯಪ್‌ನಿಂದ ಪಾವತಿಸಿ</string>
+    <string name="upi_mark_paid">ಪಾವತಿಯಾಗಿದೆ ಎಂದು ಗುರುತಿಸಿ</string>
+    <string name="upi_missing">ಪಾವತಿ QR ತೋರಿಸಲು ನಿಮ್ಮ ಅಂಗಡಿಯ UPI ಐಡಿ ಸೇರಿಸಿ</string>
+    <string name="upi_no_app">ಈ ಫೋನ್‌ನಲ್ಲಿ UPI ಆ್ಯಪ್ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="upi_for_bill">ಬಿಲ್ %1$s</string>
+    <string name="invoice_show_qr">UPI QR ತೋರಿಸಿ</string>
+    <string name="pdf_scan_to_pay">ಪಾವತಿಸಲು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ: %1$s</string>
+
+    <!-- Statement PDF -->
+    <string name="statement_title">ಖಾತೆ ಹೇಳಿಕೆ</string>
+    <string name="statement_opening">ಆರಂಭಿಕ ಬಾಕಿ</string>
+    <string name="statement_closing">ಅಂತಿಮ ಬಾಕಿ</string>
+    <string name="statement_col_date">ದಿನಾಂಕ</string>
+    <string name="statement_col_details">ವಿವರ</string>
+    <string name="statement_col_bill">ಬಿಲ್</string>
+    <string name="statement_col_paid">ಪಾವತಿ</string>
+    <string name="statement_col_balance">ಬಾಕಿ</string>
+    <string name="statement_payment_via">ಪಾವತಿ (%1$s)</string>
+    <string name="statement_to_collect">%1$s ವಸೂಲಿ ಬರಬೇಕು</string>
+    <string name="statement_to_pay">%1$s ಪಾವತಿಸಬೇಕು</string>
+
+    <!-- Home -->
+    <string name="home_greeting">ನಮಸ್ಕಾರ, %1$s</string>
+    <string name="home_to_collect">ವಸೂಲಿ ಬರಬೇಕು</string>
+    <string name="home_to_pay">ಪಾವತಿಸಬೇಕು</string>
+    <string name="home_overdue">ಮೀರಿದ ಬಾಕಿ</string>
+    <string name="home_collected">ಈ ತಿಂಗಳು ವಸೂಲಾದದ್ದು</string>
+    <string name="home_quick_actions">ತ್ವರಿತ ಕ್ರಿಯೆಗಳು</string>
+    <string name="qa_new_sale">ಹೊಸ ಮಾರಾಟ</string>
+    <string name="qa_add_payment">ಪಾವತಿ ಸೇರಿಸಿ</string>
+    <string name="qa_add_customer">ಗ್ರಾಹಕ ಸೇರಿಸಿ</string>
+    <string name="home_view_collections">ವಸೂಲಿಗಳು</string>
+    <string name="pick_party_for_payment">ಯಾರು ಪಾವತಿಸಿದರು ಎಂದು ಆರಿಸಿ</string>
+
+    <string name="field_due_date">ಕೊನೆಯ ದಿನಾಂಕ (ಐಚ್ಛಿಕ)</string>
+    <string name="btn_clear">ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="upi_confirm_title">ಹಣ ಬಂದಿದೆಯೇ?</string>
+    <string name="upi_confirm_message">%1$s UPI ಮೂಲಕ ಬಂದಿದೆ ಎಂದು ಗುರುತಿಸಬೇಕೇ?</string>
+    <string name="more_section_money">ಹಣಕಾಸು</string>
+    <string name="more_section_app">ಆ್ಯಪ್</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Collections / aging -->
+    <string name="more_collections">वसूली</string>
+    <string name="collections_empty">अभी वसूलने को कुछ नहीं है</string>
+    <string name="aging_hint">बिल कितना पुराना है, उसके अनुसार बकाया</string>
+    <string name="aging_0_30">0–30 दिन</string>
+    <string name="aging_31_60">31–60 दिन</string>
+    <string name="aging_61_90">61–90 दिन</string>
+    <string name="aging_90_plus">90+ दिन</string>
+
+    <!-- Reminder composer -->
+    <string name="reminder_title">याद दिलाने का संदेश भेजें</string>
+    <string name="reminder_language">संदेश की भाषा</string>
+    <string name="reminder_style_gentle">नरम</string>
+    <string name="reminder_style_firm">सख़्त</string>
+    <string name="reminder_message">संदेश</string>
+    <string name="reminder_whatsapp">व्हाट्सऐप पर भेजें</string>
+    <string name="reminder_sms">SMS भेजें</string>
+    <string name="reminder_attach_statement">स्टेटमेंट PDF जोड़ें</string>
+    <string name="reminder_no_phone">इस पार्टी का फ़ोन नंबर नहीं है</string>
+    <string name="reminder_msg_gentle">नमस्ते %1$s, %2$s की ओर से याद दिलाना: %3$s बाकी है। कृपया सुविधा होने पर भुगतान करें। धन्यवाद।</string>
+    <string name="reminder_msg_firm">नमस्ते %1$s, %2$s को आपका %3$s का भुगतान अतिदेय है। कृपया आज ही भुगतान करें और विवरण भेजें। धन्यवाद।</string>
+    <string name="invoice_whatsapp">व्हाट्सऐप</string>
+    <string name="invoice_message">%3$s की ओर से बिल %1$s, राशि %2$s। धन्यवाद!</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">भुगतान याद दिलाना</string>
+    <string name="notif_due_today">%1$s को %2$s देना है, आज अंतिम तारीख़</string>
+    <string name="notif_overdue">%1$s को %2$s देना है, अतिदेय</string>
+    <string name="reminders_setting">देय तारीख़ की याद दिलाना</string>
+    <string name="reminders_setting_hint">बिल की देय तारीख़ पर हर सुबह सूचना</string>
+    <string name="notif_rationale_title">क्या सूचनाएँ अनुमति दें?</string>
+    <string name="notif_rationale_message">हम सूचनाओं का उपयोग केवल यह याद दिलाने के लिए करते हैं कि आज किन ग्राहकों से पैसे लेने हैं।</string>
+    <string name="btn_allow">अनुमति दें</string>
+    <string name="btn_not_now">अभी नहीं</string>
+</resources>

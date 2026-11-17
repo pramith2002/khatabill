@@ -8,6 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
@@ -19,6 +20,11 @@ class StartViewModel @Inject constructor(
     settings: SettingsRepository,
     business: BusinessRepository,
 ) : ViewModel() {
+    /** True once the shop has been set up, so picking a language never sends the user through setup again. */
+    val hasBusiness: StateFlow<Boolean> = business.observeActive()
+        .map { it != null }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
     val state: StateFlow<StartState> = combine(settings.language, business.observeActive()) { lang, biz ->
         when {
             lang.isEmpty() -> StartState.NEEDS_LANGUAGE

@@ -1,6 +1,7 @@
 package com.teczo.khatabill.data.repositories
 
 import com.teczo.khatabill.domain.model.DocumentType
+import com.teczo.khatabill.domain.model.PaymentMode
 
 /**
  * What the billing screen hands to [InvoiceRepository.createInvoice]. All amounts are already
@@ -31,6 +32,8 @@ data class InvoiceDraft(
     val roundOff: Long,
     val grandTotal: Long,
     val paidAmount: Long,
+    /** How the money taken at billing time was paid. */
+    val paymentMode: PaymentMode = PaymentMode.CASH,
     val notes: String?,
     val terms: String?,
     val transportDetails: String?,

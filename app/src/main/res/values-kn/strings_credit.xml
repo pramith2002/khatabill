@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Collections / aging -->
+    <string name="more_collections">ವಸೂಲಿಗಳು</string>
+    <string name="collections_empty">ಈಗ ವಸೂಲಿ ಮಾಡಲು ಏನೂ ಇಲ್ಲ</string>
+    <string name="aging_hint">ಬಿಲ್ ಎಷ್ಟು ಹಳೆಯದು ಎಂಬುದರ ಪ್ರಕಾರ ವಸೂಲಿ ಬಾಕಿ</string>
+    <string name="aging_0_30">0–30 ದಿನ</string>
+    <string name="aging_31_60">31–60 ದಿನ</string>
+    <string name="aging_61_90">61–90 ದಿನ</string>
+    <string name="aging_90_plus">90+ ದಿನ</string>
+
+    <!-- Reminder composer -->
+    <string name="reminder_title">ನೆನಪೋಲೆ ಕಳುಹಿಸಿ</string>
+    <string name="reminder_language">ಸಂದೇಶದ ಭಾಷೆ</string>
+    <string name="reminder_style_gentle">ಸೌಮ್ಯ</string>
+    <string name="reminder_style_firm">ಕಟ್ಟುನಿಟ್ಟು</string>
+    <string name="reminder_message">ಸಂದೇಶ</string>
+    <string name="reminder_whatsapp">ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಕಳುಹಿಸಿ</string>
+    <string name="reminder_sms">SMS ಕಳುಹಿಸಿ</string>
+    <string name="reminder_attach_statement">ಸ್ಟೇಟ್‌ಮೆಂಟ್ PDF ಲಗತ್ತಿಸಿ</string>
+    <string name="reminder_no_phone">ಈ ವ್ಯಕ್ತಿಗೆ ಫೋನ್ ಸಂಖ್ಯೆ ಇಲ್ಲ</string>
+    <string name="reminder_msg_gentle">ನಮಸ್ಕಾರ %1$s, %2$s ಇಂದ ಸೌಜನ್ಯದ ನೆನಪೋಲೆ: %3$s ಬಾಕಿ ಇದೆ. ದಯವಿಟ್ಟು ಅನುಕೂಲವಾದಾಗ ಪಾವತಿಸಿ. ಧನ್ಯವಾದಗಳು.</string>
+    <string name="reminder_msg_firm">ನಮಸ್ಕಾರ %1$s, %2$s ಗೆ ನೀವು ಕೊಡಬೇಕಾದ %3$s ಮೀರಿದ ಬಾಕಿ ಆಗಿದೆ. ದಯವಿಟ್ಟು ಇಂದೇ ಪಾವತಿಸಿ ಮತ್ತು ವಿವರ ತಿಳಿಸಿ. ಧನ್ಯವಾದಗಳು.</string>
+    <string name="invoice_whatsapp">ವಾಟ್ಸಾಪ್</string>
+    <string name="invoice_message">%3$s ಇಂದ ಬಿಲ್ %1$s, ಮೊತ್ತ %2$s. ಧನ್ಯವಾದಗಳು!</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">ಪಾವತಿ ನೆನಪೋಲೆಗಳು</string>
+    <string name="notif_due_today">%1$s ಅವರು %2$s ಕೊಡಬೇಕು, ಇಂದು ಕೊನೆಯ ದಿನ</string>
+    <string name="notif_overdue">%1$s ಅವರು %2$s ಕೊಡಬೇಕು, ಮೀರಿದೆ</string>
+    <string name="reminders_setting">ಕೊನೆಯ ದಿನಾಂಕದ ನೆನಪೋಲೆಗಳು</string>
+    <string name="reminders_setting_hint">ಬಿಲ್ ಕೊನೆಯ ದಿನ ಬಂದಾಗ ಪ್ರತಿ ಬೆಳಿಗ್ಗೆ ಸೂಚನೆ</string>
+    <string name="notif_rationale_title">ಸೂಚನೆಗಳನ್ನು ಅನುಮತಿಸಬೇಕೇ?</string>
+    <string name="notif_rationale_message">ಇಂದು ಯಾವ ಗ್ರಾಹಕರು ಹಣ ಕೊಡಬೇಕು ಎಂದು ನೆನಪಿಸಲು ಮಾತ್ರ ಸೂಚನೆಗಳನ್ನು ಬಳಸುತ್ತೇವೆ.</string>
+    <string name="btn_allow">ಅನುಮತಿಸಿ</string>
+    <string name="btn_not_now">ಈಗ ಬೇಡ</string>
+</resources>

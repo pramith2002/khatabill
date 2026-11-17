@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Collections / aging -->
+    <string name="more_collections">Collections</string>
+    <string name="collections_empty">Nothing to collect right now</string>
+    <string name="aging_hint">Money still to collect, by how old the bill is</string>
+    <string name="aging_0_30">0–30 days</string>
+    <string name="aging_31_60">31–60 days</string>
+    <string name="aging_61_90">61–90 days</string>
+    <string name="aging_90_plus">90+ days</string>
+
+    <!-- Reminder composer -->
+    <string name="reminder_title">Send reminder</string>
+    <string name="reminder_language">Message language</string>
+    <string name="reminder_style_gentle">Gentle</string>
+    <string name="reminder_style_firm">Firm</string>
+    <string name="reminder_message">Message</string>
+    <string name="reminder_whatsapp">Send on WhatsApp</string>
+    <string name="reminder_sms">Send SMS</string>
+    <string name="reminder_attach_statement">Attach statement PDF</string>
+    <string name="reminder_no_phone">This party has no phone number</string>
+    <string name="reminder_msg_gentle">Hello %1$s, a friendly reminder from %2$s: %3$s is pending. Please pay when convenient. Thank you.</string>
+    <string name="reminder_msg_firm">Hello %1$s, your payment of %3$s to %2$s is overdue. Please pay today and share the payment details. Thank you.</string>
+    <string name="invoice_whatsapp">WhatsApp</string>
+    <string name="invoice_message">Bill %1$s for %2$s from %3$s. Thank you!</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Payment reminders</string>
+    <string name="notif_due_today">%1$s owes %2$s, due today</string>
+    <string name="notif_overdue">%1$s owes %2$s, overdue</string>
+    <string name="reminders_setting">Due-date reminders</string>
+    <string name="reminders_setting_hint">A notification each morning for bills that are due</string>
+    <string name="notif_rationale_title">Allow notifications?</string>
+    <string name="notif_rationale_message">We use notifications only to remind you which customers owe money today.</string>
+    <string name="btn_allow">Allow</string>
+    <string name="btn_not_now">Not now</string>
+</resources>

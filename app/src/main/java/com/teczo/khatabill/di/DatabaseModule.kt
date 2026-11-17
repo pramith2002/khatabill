@@ -4,9 +4,12 @@ import android.content.Context
 import androidx.room.Room
 import com.teczo.khatabill.data.dao.BusinessDao
 import com.teczo.khatabill.data.dao.CategoryDao
+import com.teczo.khatabill.data.dao.ExpenseDao
 import com.teczo.khatabill.data.dao.InvoiceDao
 import com.teczo.khatabill.data.dao.ItemDao
 import com.teczo.khatabill.data.dao.PartyDao
+import com.teczo.khatabill.data.dao.PaymentDao
+import com.teczo.khatabill.data.dao.ReminderDao
 import com.teczo.khatabill.data.dao.StockDao
 import com.teczo.khatabill.data.db.ALL_MIGRATIONS
 import com.teczo.khatabill.data.db.KhataBillDatabase
@@ -34,4 +37,7 @@ object DatabaseModule {
     @Provides fun provideItemDao(db: KhataBillDatabase): ItemDao = db.itemDao()
     @Provides fun provideInvoiceDao(db: KhataBillDatabase): InvoiceDao = db.invoiceDao()
     @Provides fun provideStockDao(db: KhataBillDatabase): StockDao = db.stockDao()
+    @Provides fun providePaymentDao(db: KhataBillDatabase): PaymentDao = db.paymentDao()
+    @Provides fun provideExpenseDao(db: KhataBillDatabase): ExpenseDao = db.expenseDao()
+    @Provides fun provideReminderDao(db: KhataBillDatabase): ReminderDao = db.reminderDao()
 }

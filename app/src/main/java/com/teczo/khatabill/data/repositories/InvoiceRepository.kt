@@ -3,7 +3,12 @@ package com.teczo.khatabill.data.repositories
 import androidx.room.withTransaction
 import com.teczo.khatabill.data.dao.InvoiceDao
 import com.teczo.khatabill.data.dao.InvoiceWithLines
+import com.teczo.khatabill.data.dao.PaymentDao
 import com.teczo.khatabill.data.dao.StockDao
+import com.teczo.khatabill.data.entities.PaymentAllocationEntity
+import com.teczo.khatabill.data.entities.PaymentEntity
+import com.teczo.khatabill.domain.ledger.InvoiceStatusRules
+import com.teczo.khatabill.domain.model.PaymentType
 import com.teczo.khatabill.data.db.KhataBillDatabase
 import com.teczo.khatabill.data.entities.DocumentCounterEntity
 import com.teczo.khatabill.data.entities.InvoiceEntity
@@ -25,11 +30,20 @@ class InvoiceRepository @Inject constructor(
     private val db: KhataBillDatabase,
     private val invoiceDao: InvoiceDao,
     private val stockDao: StockDao,
+    private val paymentDao: PaymentDao,
 ) {
     fun observeByType(businessId: String, type: DocumentType): Flow<List<InvoiceEntity>> =
         invoiceDao.observeByType(businessId, type)
 
     fun observeWithLines(id: String): Flow<InvoiceWithLines?> = invoiceDao.observeWithLines(id)
+
+    /** Every live invoice of the business, all types (balances, reports, dashboard). */
+    fun observeAll(businessId: String): Flow<List<InvoiceEntity>> = invoiceDao.observeAll(businessId)
+
+    fun observeByParty(partyId: String): Flow<List<InvoiceEntity>> = invoiceDao.observeByParty(partyId)
+
+    fun observeLinesBetween(businessId: String, from: Long, to: Long): Flow<List<InvoiceLineEntity>> =
+        invoiceDao.observeLinesBetween(businessId, from, to)
 
     /**
      * Saves an invoice, its lines, the number counter and the stock movements in ONE transaction:
@@ -71,7 +85,7 @@ class InvoiceRepository @Inject constructor(
                 roundOff = draft.roundOff,
                 grandTotal = draft.grandTotal,
                 paidAmount = draft.paidAmount,
-                status = statusFor(draft.grandTotal, draft.paidAmount),
+                status = InvoiceStatusRules.statusFor(draft.grandTotal, draft.paidAmount),
                 notes = draft.notes,
                 terms = draft.terms,
                 transportDetails = draft.transportDetails,
@@ -105,6 +119,25 @@ class InvoiceRepository @Inject constructor(
                     )
                 },
             )
+
+            if (draft.paidAmount > 0) {
+                // Money taken at billing time: a payment tied to this invoice, fully allocated to it.
+                val payment = PaymentEntity(
+                    id = UUID.randomUUID().toString(), businessId = draft.businessId, createdAt = now, updatedAt = now,
+                    type = if (draft.type == DocumentType.PURCHASE) PaymentType.PAID else PaymentType.RECEIVED,
+                    partyId = draft.partyId, invoiceId = invoice.id, date = draft.date,
+                    amount = draft.paidAmount, mode = draft.paymentMode,
+                )
+                paymentDao.insert(payment)
+                paymentDao.insertAllocations(
+                    listOf(
+                        PaymentAllocationEntity(
+                            id = UUID.randomUUID().toString(), businessId = draft.businessId, createdAt = now, updatedAt = now,
+                            paymentId = payment.id, invoiceId = invoice.id, amount = draft.paidAmount,
+                        ),
+                    ),
+                )
+            }
 
             val sign = stockSign(draft.type)
             if (sign != 0L) {
@@ -147,6 +180,13 @@ class InvoiceRepository @Inject constructor(
                     syncState = SyncState.PENDING,
                 ),
             )
+            // Money taken at billing time is refunded with the invoice; money paid later stays on account.
+            for (payment in paymentDao.getByInvoice(id)) {
+                paymentDao.update(payment.copy(deletedAt = now, updatedAt = now, syncState = SyncState.PENDING))
+            }
+            for (alloc in paymentDao.getAllocationsOfInvoice(id)) {
+                paymentDao.updateAllocation(alloc.copy(deletedAt = now, updatedAt = now, syncState = SyncState.PENDING))
+            }
             val reversals = stockDao.getByInvoice(id).map { m ->
                 m.copy(
                     id = UUID.randomUUID().toString(),
@@ -196,12 +236,9 @@ class InvoiceRepository @Inject constructor(
             "Grand total does not add up"
         }
         require(d.paidAmount in 0..d.grandTotal) { "Paid amount must be between zero and the grand total" }
-    }
-
-    private fun statusFor(grandTotal: Long, paid: Long) = when {
-        paid >= grandTotal -> InvoiceStatus.PAID
-        paid > 0 -> InvoiceStatus.PARTIAL
-        else -> InvoiceStatus.UNPAID
+        require(d.paidAmount == 0L || d.type == DocumentType.SALE || d.type == DocumentType.PURCHASE) {
+            "Only sales and purchases can be paid at billing time"
+        }
     }
 
     /** +1 stock in, -1 stock out, 0 no stock effect (quotations, proformas, challans). */

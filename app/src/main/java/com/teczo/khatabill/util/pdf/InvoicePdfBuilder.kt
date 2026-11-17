@@ -14,7 +14,10 @@ import com.teczo.khatabill.R
 import com.teczo.khatabill.data.entities.BusinessEntity
 import com.teczo.khatabill.data.entities.InvoiceEntity
 import com.teczo.khatabill.data.entities.InvoiceLineEntity
+import com.teczo.khatabill.domain.model.DocumentType
 import com.teczo.khatabill.domain.model.InvoiceStatus
+import com.teczo.khatabill.util.qr.QrCode
+import com.teczo.khatabill.util.upi.UpiLink
 import com.teczo.khatabill.ui.util.Labels
 import com.teczo.khatabill.util.dates.DateFormat
 import com.teczo.khatabill.util.money.AmountInWords
@@ -304,6 +307,22 @@ class InvoicePdfBuilder(private val context: Context) {
                 y += 12
             }
             invoice.notes?.takeIf { it.isNotBlank() }?.let { y += draw(context.getString(R.string.pdf_notes, it), margin, y, contentW, 9f) + 6 }
+
+            // Scan-to-pay QR for the unpaid balance of a live sale (the app only builds the link; payment is confirmed by hand).
+            val due = invoice.grandTotal - invoice.paidAmount
+            val upi = business.upiId
+            if (invoice.type == DocumentType.SALE && invoice.status != InvoiceStatus.CANCELLED && due > 0 && !upi.isNullOrBlank()) {
+                ensure(104f)
+                val modules = QrCode.modules(UpiLink.build(upi, business.name, due, invoice.number))
+                val size = 88f
+                val cell = size / modules.size
+                val dark = Paint().apply { color = Color.BLACK; isAntiAlias = false }
+                for (r in modules.indices) for (c in modules.indices) {
+                    if (modules[r][c]) canvas.drawRect(margin + c * cell, y + r * cell, margin + (c + 1) * cell, y + (r + 1) * cell, dark)
+                }
+                draw(context.getString(R.string.pdf_scan_to_pay, "₹" + money(due)), margin + size + 10f, y + size / 2 - 6f, 250f, 10f, bold = true)
+                y += size + 10f
+            }
 
             ensure(50f)
             val sigX = margin + contentW - 170f

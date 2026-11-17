@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Table columns -->
+    <string name="col_date">Date</string>
+    <string name="col_number">Bill no.</string>
+    <string name="col_party">Party</string>
+    <string name="col_gstin">GSTIN</string>
+    <string name="col_taxable">Taxable</string>
+    <string name="col_cgst">CGST</string>
+    <string name="col_sgst">SGST</string>
+    <string name="col_igst">IGST</string>
+    <string name="col_tax">Tax</string>
+    <string name="col_total">Total</string>
+    <string name="col_item">Item</string>
+    <string name="col_hsn">HSN</string>
+    <string name="col_qty">Qty</string>
+    <string name="col_unit">Unit</string>
+    <string name="col_rate">Rate</string>
+    <string name="col_stock">Stock</string>
+    <string name="col_value">Value</string>
+    <string name="col_category">Category</string>
+    <string name="col_amount">Amount</string>
+    <string name="col_count">Bills</string>
+    <string name="col_details">Details</string>
+    <string name="col_in">Money in</string>
+    <string name="col_out">Money out</string>
+    <string name="col_balance">Balance</string>
+    <string name="col_mode">Mode</string>
+    <string name="col_place">State</string>
+    <string name="col_gst_rate">GST %</string>
+    <string name="col_min_stock">Min stock</string>
+
+    <!-- Report names and tables -->
+    <string name="more_reports">Reports</string>
+    <string name="reports_hint">Pick a report, then choose the dates</string>
+    <string name="report_sales">Sales report</string>
+    <string name="report_purchases">Purchase report</string>
+    <string name="report_item_wise">Item-wise sales</string>
+    <string name="report_party_wise">Party-wise sales</string>
+    <string name="report_pl">Profit and loss</string>
+    <string name="report_stock">Stock summary</string>
+    <string name="report_low_stock">Low stock</string>
+    <string name="report_expenses">Expense report</string>
+    <string name="report_gstr1">GST sales summary (GSTR-1 style)</string>
+    <string name="report_gstr3b">GST tax summary (GSTR-3B style)</string>
+    <string name="tbl_b2b">B2B sales (with GSTIN)</string>
+    <string name="tbl_b2c">B2C sales (no GSTIN)</string>
+    <string name="tbl_hsn">HSN summary</string>
+    <string name="tbl_3b">Tax summary</string>
+    <string name="pl_sales">Sales (taxable value)</string>
+    <string name="pl_sales_returns">Sales returns</string>
+    <string name="pl_purchases">Purchases (taxable value)</string>
+    <string name="pl_purchase_returns">Purchase returns</string>
+    <string name="pl_expenses">Expenses</string>
+    <string name="pl_profit">Profit</string>
+    <string name="gst_outward">Tax collected on sales</string>
+    <string name="gst_inward">Tax paid on purchases</string>
+    <string name="gst_net">Net tax payable</string>
+    <string name="report_empty">No data in this period</string>
+    <string name="report_gst_note">Summary for your accountant. Please check with your CA before filing.</string>
+    <string name="export_csv">Share CSV</string>
+    <string name="export_pdf">Share PDF</string>
+
+    <!-- Date ranges -->
+    <string name="range_today">Today</string>
+    <string name="range_week">This week</string>
+    <string name="range_month">This month</string>
+    <string name="range_quarter">This quarter</string>
+    <string name="range_fy">This financial year</string>
+    <string name="range_custom">Choose dates</string>
+    <string name="range_from">From</string>
+    <string name="range_to">To</string>
+
+    <!-- Books -->
+    <string name="more_day_book">Day book</string>
+    <string name="more_cash_book">Cash book</string>
+    <string name="more_bank_book">Bank book</string>
+    <string name="book_in">Money in</string>
+    <string name="book_out">Money out</string>
+    <string name="daybook_empty">Nothing recorded on this day</string>
+    <string name="daybook_sale_return">Sale return</string>
+    <string name="daybook_purchase_return">Purchase return</string>
+    <string name="daybook_expense">Expense</string>
+
+    <!-- Expenses -->
+    <string name="more_expenses">Expenses</string>
+    <string name="expenses_empty">No expenses yet</string>
+    <string name="expenses_hint">Tap Add expense to record rent, salary, transport and more</string>
+    <string name="expense_add">Add expense</string>
+    <string name="expense_title_new">New expense</string>
+    <string name="exp_rent">Rent</string>
+    <string name="exp_salary">Salary</string>
+    <string name="exp_electricity">Electricity</string>
+    <string name="exp_transport">Transport</string>
+    <string name="exp_raw_material">Raw material</string>
+    <string name="exp_repair">Repairs</string>
+    <string name="exp_food">Tea and food</string>
+    <string name="exp_packing">Packing</string>
+    <string name="exp_other">Other</string>
+    <string name="expense_receipt_add">Add receipt photo</string>
+    <string name="expense_receipt_attached">Receipt photo added</string>
+    <string name="expense_delete_title">Delete this expense?</string>
+    <string name="expense_delete_message">It will be removed from the books and reports.</string>
+
+    <!-- Dashboard -->
+    <string name="dash_today">Today</string>
+    <string name="dash_sales">Sales</string>
+    <string name="dash_collected">Collected</string>
+    <string name="dash_month_sales">This month\'s sales</string>
+    <string name="dash_top_items">Top items this month</string>
+    <string name="dash_top_customers">Top customers this month</string>
+    <string name="dash_recent">Recent bills</string>
+    <string name="dash_none">Nothing yet</string>
+</resources>

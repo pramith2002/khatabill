@@ -19,6 +19,7 @@ fun NewInvoiceScreen(
     val items by viewModel.items.collectAsStateWithLifecycle()
     val error by viewModel.error.collectAsStateWithLifecycle()
     val savedId by viewModel.savedId.collectAsStateWithLifecycle()
+    val creditWarning by viewModel.creditWarning.collectAsStateWithLifecycle()
 
     LaunchedEffect(savedId) { savedId?.let(onSaved) }
 
@@ -38,5 +39,6 @@ fun NewInvoiceScreen(
             onRemoveLine = viewModel::removeLine,
             onSave = viewModel::save,
         ),
+        creditWarning = creditWarning,
     )
 }

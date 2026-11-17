@@ -52,6 +52,8 @@ fun EmptyState(title: String, hint: String, modifier: Modifier = Modifier) {
 fun AddFab(label: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
     ExtendedFloatingActionButton(
         onClick = onClick,
+        containerColor = MaterialTheme.colorScheme.secondary,
+        contentColor = MaterialTheme.colorScheme.onSecondary,
         icon = { Icon(Icons.Filled.Add, contentDescription = null) },
         text = { Text(label) },
         modifier = modifier,

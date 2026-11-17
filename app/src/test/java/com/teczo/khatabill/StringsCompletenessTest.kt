@@ -50,7 +50,7 @@ class StringsCompletenessTest {
         val sameEverywhere = setOf(
             "app_name", "lang_en", "lang_kn", "lang_hi", "total_cgst", "total_sgst", "total_igst", "field_gstin",
             "pdf_gstin", "pdf_col_hsn", "pdf_col_gst", "pdf_ifsc", "pdf_upi", "amount_rupees", "qty_unit", "percent_value",
-            "discount_percent_short", "discount_amount_short", "sample_row",
+            "discount_percent_short", "discount_amount_short", "sample_row", "mode_upi", "col_gstin", "col_cgst", "col_sgst", "col_igst", "col_hsn", "col_gst_rate",
         )
         for ((name, text) in en) {
             if (name in sameEverywhere || name.startsWith("state_")) continue

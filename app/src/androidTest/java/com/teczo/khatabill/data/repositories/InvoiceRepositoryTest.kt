@@ -33,7 +33,7 @@ class InvoiceRepositoryTest {
     fun setUp() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         db = Room.inMemoryDatabaseBuilder(context, KhataBillDatabase::class.java).build()
-        invoices = InvoiceRepository(db, db.invoiceDao(), db.stockDao())
+        invoices = InvoiceRepository(db, db.invoiceDao(), db.stockDao(), db.paymentDao())
         items = ItemRepository(db, db.itemDao(), db.stockDao())
     }
 

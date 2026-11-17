@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.teczo.khatabill.R
+import com.teczo.khatabill.ui.components.AccentButton
 import com.teczo.khatabill.domain.model.ItemType
 import com.teczo.khatabill.domain.model.StockReason
 import com.teczo.khatabill.ui.components.AppTextField
@@ -80,7 +81,7 @@ fun ItemDetailScreen(onBack: () -> Unit, onEdit: (String) -> Unit, viewModel: It
                     Text(stringResource(R.string.btn_edit))
                 }
                 if (isProduct) {
-                    Button(onClick = { showAdjust = true }, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
+                    AccentButton(onClick = { showAdjust = true }, modifier = Modifier.weight(1f).heightIn(min = 56.dp)) {
                         Text(stringResource(R.string.stock_adjust))
                     }
                 }

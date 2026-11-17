@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Record payment -->
+    <string name="payment_title_new">Record payment</string>
+    <string name="payment_received">Money received</string>
+    <string name="payment_paid">Money paid</string>
+    <string name="field_amount">Amount (₹)</string>
+    <string name="field_payment_mode">Paid by</string>
+    <string name="mode_cash">Cash</string>
+    <string name="mode_upi">UPI</string>
+    <string name="mode_card">Card</string>
+    <string name="mode_bank">Bank</string>
+    <string name="mode_cheque">Cheque</string>
+    <string name="field_reference">Reference or UTR (optional)</string>
+    <string name="field_against_invoice">Against bill (optional)</string>
+    <string name="against_oldest">Oldest bills first</string>
+    <string name="btn_save_payment">Save payment</string>
+    <string name="balance_outstanding">Outstanding: %1$s</string>
+    <string name="err_choose_party">Choose a party first</string>
+    <string name="err_amount">Enter an amount above zero</string>
+
+    <!-- Payment list -->
+    <string name="more_payments">Payments</string>
+    <string name="payments_empty">No payments yet</string>
+    <string name="payments_empty_hint">Record the first one from a party\'s page or the Home screen</string>
+    <string name="payments_by_mode">By payment mode</string>
+    <string name="payment_delete_title">Delete this payment?</string>
+    <string name="payment_delete_message">The bills it paid become unpaid again.</string>
+    <string name="payment_on_account">On account: %1$s</string>
+    <string name="payment_walk_in">Walk-in customer</string>
+
+    <!-- Party list and detail -->
+    <string name="filter_all">All</string>
+    <string name="filter_to_collect">To collect</string>
+    <string name="filter_to_pay">To pay</string>
+    <string name="filter_overdue">Overdue</string>
+    <string name="party_balance_to_collect">To collect</string>
+    <string name="party_balance_to_pay">To pay</string>
+    <string name="party_balance_settled">All settled</string>
+    <string name="party_add_payment">Add payment</string>
+    <string name="party_statement">Statement PDF</string>
+    <string name="party_remind">Remind</string>
+    <string name="party_section_bills">Bills</string>
+    <string name="party_section_payments">Payments</string>
+    <string name="party_no_bills">No bills yet</string>
+    <string name="party_no_payments">No payments yet</string>
+    <string name="credit_limit_warning">Credit limit of %1$s will be crossed (balance after this bill: %2$s)</string>
+
+    <!-- UPI -->
+    <string name="upi_scan_title">Scan to pay</string>
+    <string name="upi_pay_with_app">Pay with any UPI app</string>
+    <string name="upi_mark_paid">Mark as paid</string>
+    <string name="upi_missing">Add your shop\'s UPI ID to show a payment QR</string>
+    <string name="upi_no_app">No UPI app found on this phone</string>
+    <string name="upi_for_bill">Bill %1$s</string>
+    <string name="invoice_show_qr">Show UPI QR</string>
+    <string name="pdf_scan_to_pay">Scan to pay %1$s</string>
+
+    <!-- Statement PDF -->
+    <string name="statement_title">STATEMENT OF ACCOUNT</string>
+    <string name="statement_opening">Opening balance</string>
+    <string name="statement_closing">Closing balance</string>
+    <string name="statement_col_date">Date</string>
+    <string name="statement_col_details">Details</string>
+    <string name="statement_col_bill">Bill</string>
+    <string name="statement_col_paid">Paid</string>
+    <string name="statement_col_balance">Balance</string>
+    <string name="statement_payment_via">Payment (%1$s)</string>
+    <string name="statement_to_collect">%1$s to collect</string>
+    <string name="statement_to_pay">%1$s to pay</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Hello, %1$s</string>
+    <string name="home_to_collect">To collect</string>
+    <string name="home_to_pay">To pay</string>
+    <string name="home_overdue">Overdue</string>
+    <string name="home_collected">collected this month</string>
+    <string name="home_quick_actions">Quick actions</string>
+    <string name="qa_new_sale">New sale</string>
+    <string name="qa_add_payment">Add payment</string>
+    <string name="qa_add_customer">Add customer</string>
+    <string name="home_view_collections">Collections</string>
+    <string name="pick_party_for_payment">Choose who paid</string>
+
+    <string name="field_due_date">Due date (optional)</string>
+    <string name="btn_clear">Clear</string>
+    <string name="upi_confirm_title">Payment received?</string>
+    <string name="upi_confirm_message">Mark %1$s as received by UPI?</string>
+    <string name="more_section_money">Money</string>
+    <string name="more_section_app">App</string>
+</resources>

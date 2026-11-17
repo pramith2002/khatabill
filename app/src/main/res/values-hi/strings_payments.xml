@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Record payment -->
+    <string name="payment_title_new">भुगतान दर्ज करें</string>
+    <string name="payment_received">पैसे मिले</string>
+    <string name="payment_paid">पैसे दिए</string>
+    <string name="field_amount">राशि (₹)</string>
+    <string name="field_payment_mode">भुगतान का तरीका</string>
+    <string name="mode_cash">नकद</string>
+    <string name="mode_upi">UPI</string>
+    <string name="mode_card">कार्ड</string>
+    <string name="mode_bank">बैंक</string>
+    <string name="mode_cheque">चेक</string>
+    <string name="field_reference">संदर्भ या UTR (वैकल्पिक)</string>
+    <string name="field_against_invoice">बिल के विरुद्ध (वैकल्पिक)</string>
+    <string name="against_oldest">पुराने बिल पहले</string>
+    <string name="btn_save_payment">भुगतान सहेजें</string>
+    <string name="balance_outstanding">बकाया: %1$s</string>
+    <string name="err_choose_party">पहले पार्टी चुनें</string>
+    <string name="err_amount">शून्य से ज़्यादा राशि डालें</string>
+
+    <!-- Payment list -->
+    <string name="more_payments">भुगतान</string>
+    <string name="payments_empty">अभी कोई भुगतान नहीं है</string>
+    <string name="payments_empty_hint">पहला भुगतान पार्टी के पेज या होम स्क्रीन से दर्ज करें</string>
+    <string name="payments_by_mode">भुगतान के तरीके के अनुसार</string>
+    <string name="payment_delete_title">क्या यह भुगतान हटाएँ?</string>
+    <string name="payment_delete_message">इससे चुकाए गए बिल फिर से बाकी हो जाएँगे।</string>
+    <string name="payment_on_account">खाते में जमा: %1$s</string>
+    <string name="payment_walk_in">आम ग्राहक</string>
+
+    <!-- Party list and detail -->
+    <string name="filter_all">सभी</string>
+    <string name="filter_to_collect">वसूली</string>
+    <string name="filter_to_pay">देना है</string>
+    <string name="filter_overdue">अतिदेय</string>
+    <string name="party_balance_to_collect">वसूली</string>
+    <string name="party_balance_to_pay">देना है</string>
+    <string name="party_balance_settled">सब चुकता</string>
+    <string name="party_add_payment">भुगतान जोड़ें</string>
+    <string name="party_statement">स्टेटमेंट PDF</string>
+    <string name="party_remind">याद दिलाएँ</string>
+    <string name="party_section_bills">बिल</string>
+    <string name="party_section_payments">भुगतान</string>
+    <string name="party_no_bills">अभी कोई बिल नहीं है</string>
+    <string name="party_no_payments">अभी कोई भुगतान नहीं है</string>
+    <string name="credit_limit_warning">%1$s की उधार सीमा पार हो जाएगी (इस बिल के बाद बकाया: %2$s)</string>
+
+    <!-- UPI -->
+    <string name="upi_scan_title">भुगतान के लिए स्कैन करें</string>
+    <string name="upi_pay_with_app">किसी भी UPI ऐप से भुगतान करें</string>
+    <string name="upi_mark_paid">भुगतान हुआ चिह्नित करें</string>
+    <string name="upi_missing">भुगतान QR दिखाने के लिए अपनी दुकान की UPI ID जोड़ें</string>
+    <string name="upi_no_app">इस फ़ोन में कोई UPI ऐप नहीं मिला</string>
+    <string name="upi_for_bill">बिल %1$s</string>
+    <string name="invoice_show_qr">UPI QR दिखाएँ</string>
+    <string name="pdf_scan_to_pay">भुगतान के लिए स्कैन करें: %1$s</string>
+
+    <!-- Statement PDF -->
+    <string name="statement_title">खाता विवरण</string>
+    <string name="statement_opening">शुरुआती बकाया</string>
+    <string name="statement_closing">अंतिम बकाया</string>
+    <string name="statement_col_date">तारीख़</string>
+    <string name="statement_col_details">विवरण</string>
+    <string name="statement_col_bill">बिल</string>
+    <string name="statement_col_paid">भुगतान</string>
+    <string name="statement_col_balance">शेष</string>
+    <string name="statement_payment_via">भुगतान (%1$s)</string>
+    <string name="statement_to_collect">%1$s वसूली</string>
+    <string name="statement_to_pay">%1$s देना है</string>
+
+    <!-- Home -->
+    <string name="home_greeting">नमस्ते, %1$s</string>
+    <string name="home_to_collect">वसूली</string>
+    <string name="home_to_pay">देना है</string>
+    <string name="home_overdue">अतिदेय</string>
+    <string name="home_collected">इस महीने वसूल हुआ</string>
+    <string name="home_quick_actions">त्वरित कार्य</string>
+    <string name="qa_new_sale">नई बिक्री</string>
+    <string name="qa_add_payment">भुगतान जोड़ें</string>
+    <string name="qa_add_customer">ग्राहक जोड़ें</string>
+    <string name="home_view_collections">वसूली</string>
+    <string name="pick_party_for_payment">किसने भुगतान किया, चुनें</string>
+
+    <string name="field_due_date">देय तारीख़ (वैकल्पिक)</string>
+    <string name="btn_clear">हटाएँ</string>
+    <string name="upi_confirm_title">क्या पैसे मिल गए?</string>
+    <string name="upi_confirm_message">%1$s UPI से मिला चिह्नित करें?</string>
+    <string name="more_section_money">पैसों का काम</string>
+    <string name="more_section_app">ऐप</string>
+</resources>

@@ -8,6 +8,7 @@ import com.teczo.khatabill.domain.gst.GstInvoiceInput
 import com.teczo.khatabill.domain.gst.GstInvoiceResult
 import com.teczo.khatabill.domain.gst.GstLineInput
 import com.teczo.khatabill.domain.model.DocumentType
+import com.teczo.khatabill.domain.model.PaymentMode
 import com.teczo.khatabill.util.money.MoneyInput
 
 /** One line as typed on the screen. Text fields stay text until they are parsed for the calculation. */
@@ -37,6 +38,10 @@ data class InvoiceFormState(
     val overallDiscount: String = "",
     val otherCharges: String = "",
     val paid: String = "",
+    /** How the money taken now was paid. */
+    val paymentMode: PaymentMode = PaymentMode.CASH,
+    /** Epoch day, optional (drives overdue and due-date reminders). */
+    val dueDate: Long? = null,
     val notes: String = "",
 )
 
